@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="contact-us.css" />
+
+    <!-- <link rel="stylesheet" href="/pages/healthcare/health.css" /> -->
+    <!-- <link rel="stylesheet" href="/pages/product/product.css" /> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+
+    <title>Vite App</title>
+  </head>
+
+  <body>
+    <section class="navbar-comp"></section>
+
+    <section class="chat">
+      <ul class="chatbox_container">
+        <li>
+          <ul>
+            <li class="chat_head">
+              <ul>
+                <li class="user_image">
+                  <img src="/images/bot.jpg" alt="" />
+                </li>
+                <li class="user_name">
+                  <h2>Demo Bot</h2>
+                  <p>Automated Chat</p>
+                </li>
+              </ul>
+
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </li>
+            <li>
+              <ul class="main_chat">
+                <li class="bot">
+                  <p>Hi there</p>
+                </li>
+
+                <li class="bot">
+                  <p>How can i help you today ?</p>
+                </li>
+                <li class="user">
+                  <p>Hello</p>
+                </li>
+                <li class="bot">
+                  <p>Hi there</p>
+                </li>
+
+                <li class="bot">
+                  <p>How can i help you today ?</p>
+                </li>
+                <li class="user">
+                  <p>Hello</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li class="message_input">
+          <input type="text" placeholder="Type your message..." />
+
+          <i class="fa-solid fa-paper-plane"></i>
+        </li>
+      </ul>
+    </section>
+    <section class="chatbox">
+      <i class="fa-solid fa-message fa-cross"></i>
+    </section>
+
+    <section class="container-fluid contactus_outer_container">
+      <section class="container contactus_inner_container">
+        <section class="row justify-content-center">
+          <ul class="col contactus_left text-center">
+            <li data-aos="fade-up" data-aos-duration="1000">
+              <h1>Contact us</h1>
+            </li>
+            <li
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="500"
+            >
+              <p>
+                If you have questions about ZUQO, please contact us. <br />
+                We look forward to hearing from you.
+              </p>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+
+    <section class="container contact_card_container">
+      <section class="card_grid">
+        <ul class="contact_card" data-aos="fade-up" data-aos-duration="1000">
+          <li>
+            <h1>Contact Us</h1>
+          </li>
+          <li>
+            <p>
+              Fill out this easy form and a sales representative will reach out
+              via email or phone.
+            </p>
+          </li>
+          <li>
+            <a href="../contact-form/contact-form.html"
+              >Contact a specialist <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </li>
+        </ul>
+        <ul
+          class="contact_card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="500"
+        >
+          <li>
+            <h1>Watch Demo</h1>
+          </li>
+          <li>
+            <p>
+              You need to fill some info. Share a few details in the form so we
+              can better help you and your company.
+            </p>
+          </li>
+          <li>
+            <a href="/pages/company/contact-form/contact-form.html"
+              >Fill the form <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </li>
+        </ul>
+        <ul
+          class="contact_card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="1000"
+        >
+          <li>
+            <h1>Contact With us</h1>
+          </li>
+          <li>
+            <p>Ready to chat about that next step? We're here to help.</p>
+          </li>
+          <li>
+            <a href="#" class="open_chat"
+              >Chat now <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="container-fluid gradient_outer_container"></section>
+
+    <section class="office_outer_container container-fluid">
+      <section class="container office_inner_container">
+        <section class="row flex-column">
+          <ul class="col office_top text-center">
+            <li><h1 class="text-white">Our Head Office</h1></li>
+          </ul>
+          <ul class="col office_bottom mt-5">
+            <li>
+              <img src="/images/headoffice.webp" alt="" />
+            </li>
+            <li>
+              <ul class="office_bottom_content">
+                <li>
+                  <i class="fa-solid fa-location-dot"></i>
+                  <p>
+                    No 432 1ST & 2nd Fl, 4TH Cross 2nd <br />
+                    Block HRBR Layout, Kalyan <br />
+                    Nagar Banglore, KA 560043
+                  </p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-phone"></i>
+                  <p>+91 98 76 543210</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-envelope"></i>
+                  <p>mail@zuqo.com</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section class="row flex-column carousel_contact">
+          <ul class="col carousel_contact_top">
+            <li>
+              <h1>Our Offices over the World</h1>
+            </li>
+          </ul>
+          <ul class="col carousel_contact_bottom">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <ul class="carousel_card_container">
+                    <li>
+                      <img src="/images/chennai.webp" alt="" />
+                    </li>
+                    <li>
+                      <ul>
+                        <li>
+                          <h1>Chennai</h1>
+                          <p class="px-4">
+                            Khair Complex, Ibrahim Bagh, Hyderabad, Telangana
+                            500008
+                          </p>
+                        </li>
+                        <li>
+                          <a href="#"
+                            >Get Direction
+                            <i class="fa-solid fa-arrow-right"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="swiper-slide">
+                  <ul class="carousel_card_container">
+                    <li>
+                      <img src="/images/banglore.webp" alt="" />
+                    </li>
+                    <li>
+                      <ul>
+                        <li>
+                          <h1>Bangalore</h1>
+                          <p class="px-4">
+                            No.1/1, Srinivasa Pillai Street, Mavalli, Bengaluru,
+                            Karnataka 560004
+                          </p>
+                        </li>
+                        <li>
+                          <a href="#"
+                            >Get Direction
+                            <i class="fa-solid fa-arrow-right"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="swiper-slide">
+                  <ul class="carousel_card_container">
+                    <li>
+                      <img src="/images/andrapradesh.webp" alt="" />
+                    </li>
+                    <li>
+                      <ul>
+                        <li>
+                          <h1>Andhra Pradesh</h1>
+                          <p class="px-4">
+                            Vijayawada Road Near Prakasam, Barrage, Undavalli,
+                            Andhra Pradesh 522501
+                          </p>
+                        </li>
+                        <li>
+                          <a href="#"
+                            >Get Direction
+                            <i class="fa-solid fa-arrow-right"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="swiper-slide">
+                  <ul class="carousel_card_container">
+                    <li>
+                      <img src="/images/telangana.webp" alt="" />
+                    </li>
+                    <li>
+                      <ul>
+                        <li>
+                          <h1>Telangana</h1>
+                          <p class="px-4">
+                            Khair Complex, Ibrahim Bagh, Hyderabad, Telangana
+                            500008
+                          </p>
+                        </li>
+                        <li>
+                          <a href="#"
+                            >Get Direction
+                            <i class="fa-solid fa-arrow-right"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="swiper-slide">
+                  <ul class="carousel_card_container">
+                    <li>
+                      <img src="/images/pune.webp" alt="" />
+                    </li>
+                    <li>
+                      <ul>
+                        <li>
+                          <h1>Pune</h1>
+                          <p class="px-4">
+                            No.1/1, Srinivasa Pillai Street, West Mambalam ,
+                            Chennai,600001.
+                          </p>
+                        </li>
+                        <li>
+                          <a href="#"
+                            >Get Direction
+                            <i class="fa-solid fa-arrow-right"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="swiper-slide">
+                  <ul class="carousel_card_container">
+                    <li>
+                      <img src="/images/mumbai.webp" alt="" />
+                    </li>
+                    <li>
+                      <ul>
+                        <li>
+                          <h1>Mumbai</h1>
+                          <p class="px-4">
+                            No.1/1, Srinivasa Pillai Street, West Mambalam ,
+                            Chennai,600001.
+                          </p>
+                        </li>
+                        <li>
+                          <a href="#"
+                            >Get Direction
+                            <i class="fa-solid fa-arrow-right"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </section>
+      </section>
+    </section>
+    <section class="footer"></section>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script src="/main.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        spaceBetween: 10,
+        slidesPerView: 3,
+        loop: true,
+        coverflowEffect: {
+          rotate: 20,
+          stretch: 0,
+          depth: -100,
+          slideShadows: false,
+        },
+      });
+
+      $(document).ready(function () {
+        $(".chatbox , .open_chat").click(function () {
+          $(".chat").fadeToggle();
+
+          $(".chatbox > .fa-solid").toggleClass("fa-xmark");
+        });
+      });
+    </script>
+  </body>
+</html>

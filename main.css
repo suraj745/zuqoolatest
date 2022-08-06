@@ -362,16 +362,31 @@ body a:hover {
 
 #footer_form_container ul li input {
   width: 100%;
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
   border: none;
   background: none;
-  border-radius: 0.5rem;
   outline: none;
-  background-color: white;
+  background: none;
+  border-bottom: 0.2rem solid white;
+  color: white;
+  text-indent: 0rem !important;
+}
+
+#footer_form_container ul li input:focus {
+  border-color: #ff4040;
+}
+
+#footer_form_container ul li input::placeholder {
+  color: silver;
 }
 
 #footer_form_container ul label {
   color: white;
+}
+
+.footer_email,
+.footer_message {
+  margin-top: 4rem !important;
 }
 
 #footer_form_container ul > :nth-child(n + 3) {
@@ -379,10 +394,6 @@ body a:hover {
   justify-content: center;
   align-items: start;
   flex-direction: column;
-}
-
-#footer_form_container ul > :nth-child(4) input {
-  height: 7rem;
 }
 
 #footer_form_container ul li {

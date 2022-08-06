@@ -1,0 +1,448 @@
+.contactus_outer_container {
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-end;
+  background-image: linear-gradient(#0000004f, #0000004f),
+    url("/images/contactus_bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  padding-block-end: 5rem;
+}
+
+.contactus_left li {
+  margin-top: 3rem;
+}
+
+.contactus_left > :nth-child(1) h1 {
+  font-size: clamp(3.2rem, 4vw, 6rem);
+  font-weight: 700;
+}
+
+.contactus_left > :nth-child(2) p {
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-weight: 700;
+}
+
+/* ------------------------------ cantact_card ------------------------------ */
+
+.contact_card_container {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-content: space-between;
+  gap: 5rem;
+
+  grid-template-areas: "card_1 card_2 card_3";
+}
+
+.card_grid > :nth-child(1) {
+  grid-area: card_1;
+}
+
+.card_grid > :nth-child(2) {
+  grid-area: card_2;
+}
+
+.card_grid > :nth-child(3) {
+  grid-area: card_3;
+}
+.contact_card {
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: minmax(20rem);
+}
+
+.contact_card > :nth-child(1) h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+}
+
+.contact_card > :nth-child(2) p {
+  font-weight: 500;
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  color: #373737 !important;
+}
+
+.contact_card > :nth-child(3) {
+  display: flex;
+  align-items: flex-end;
+}
+
+@media screen and (max-width: 990px) {
+  .card_grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "card_1 card_2" "card_3 card_3";
+    place-items: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    .card_grid {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas: "card_1" "card_2" "card_3 ";
+    }
+  }
+}
+
+/* --------------------------------- office --------------------------------- */
+
+.gradient_outer_container {
+  min-height: 60vh;
+  position: relative;
+  background-image: linear-gradient(to top, #3c4049, #5f6166);
+}
+
+.gradient_outer_container::after {
+  content: "";
+  background-color: white;
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  clip-path: polygon(
+    100% 0%,
+    0% 0%,
+    0% 65%,
+    1% 64.95%,
+    2% 64.8%,
+    3% 64.6%,
+    4% 64.3%,
+    5% 63.9%,
+    6% 63.45%,
+    7% 62.9%,
+    8% 62.25%,
+    9% 61.55%,
+    10% 60.8%,
+    11% 59.95%,
+    12% 59.05%,
+    13% 58.1%,
+    14% 57.1%,
+    15% 56.05%,
+    16% 55%,
+    17% 53.9%,
+    18% 52.8%,
+    19% 51.65%,
+    20% 50.5%,
+    21% 49.35%,
+    22% 48.2%,
+    23% 47.05%,
+    24% 45.9%,
+    25% 44.8%,
+    26% 43.75%,
+    27% 42.75%,
+    28% 41.75%,
+    29% 40.8%,
+    30% 39.9%,
+    31% 39.1%,
+    32% 38.35%,
+    33% 37.65%,
+    34% 37.05%,
+    35% 36.5%,
+    36% 36.05%,
+    37% 35.65%,
+    38% 35.35%,
+    39% 35.15%,
+    40% 35.05%,
+    41% 35%,
+    42% 35.05%,
+    43% 35.2%,
+    44% 35.45%,
+    45% 35.75%,
+    46% 36.15%,
+    47% 36.65%,
+    48% 37.2%,
+    49% 37.85%,
+    50% 38.55%,
+    51% 39.35%,
+    52% 40.2%,
+    53% 41.1%,
+    54% 42.05%,
+    55% 43.05%,
+    56% 44.1%,
+    57% 45.15%,
+    58% 46.3%,
+    59% 47.4%,
+    60% 48.55%,
+    61% 49.7%,
+    62% 50.85%,
+    63% 52%,
+    64% 53.15%,
+    65% 54.25%,
+    66% 55.35%,
+    67% 56.4%,
+    68% 57.45%,
+    69% 58.4%,
+    70% 59.35%,
+    71% 60.2%,
+    72% 61.05%,
+    73% 61.8%,
+    74% 62.45%,
+    75% 63.05%,
+    76% 63.6%,
+    77% 64.05%,
+    78% 64.4%,
+    79% 64.7%,
+    80% 64.85%,
+    81% 65%,
+    82% 65%,
+    83% 64.9%,
+    84% 64.75%,
+    85% 64.5%,
+    86% 64.2%,
+    87% 63.75%,
+    88% 63.25%,
+    89% 62.7%,
+    90% 62.05%,
+    91% 61.3%,
+    92% 60.5%,
+    93% 59.65%,
+    94% 58.75%,
+    95% 57.8%,
+    96% 56.8%,
+    97% 55.75%,
+    98% 54.65%,
+    99% 53.55%,
+    100% 52.4%
+  );
+}
+
+/* ---------------------------- office container ---------------------------- */
+
+.office_outer_container {
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, #3c4049, #3c4049);
+}
+
+.office_top > li h1 {
+  font-size: clamp(2.5rem, 4vw, 3rem);
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.office_bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media screen and (max-width: 990px) {
+  .office_bottom {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+}
+
+.office_bottom_content li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  color: white;
+
+  margin-top: 3rem;
+}
+
+.office_bottom_content li > i {
+  color: #ff4040;
+  font-size: 3rem;
+}
+
+/* carousel */
+
+.carousel_contact {
+  margin-top: 8rem !important;
+  min-height: 80vh;
+}
+.carousel_contact_top > li h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: white;
+  text-transform: capitalize;
+}
+
+/* --------------------------------- swiper --------------------------------- */
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel_card_container {
+  max-width: 32.28rem;
+  min-height: 29.6rem;
+  background-color: white !important;
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+.carousel_card_container > :nth-child(1) img {
+  max-width: 100%;
+  min-height: 17.2rem;
+  object-fit: cover;
+}
+
+.carousel_card_container > :nth-child(2) {
+  padding: 1rem;
+}
+.carousel_card_container > :nth-child(2) ul > :nth-child(1) h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.carousel_card_container > :nth-child(2) ul > :nth-child(2) p {
+  font-weight: 500;
+}
+
+.carousel_card_container > :nth-child(2) ul > :nth-child(2) a {
+  font-weight: 500;
+  color: black;
+}
+
+/* --------------------------------- chatBox -------------------------------- */
+
+.chat_head {
+  background-color: #f76868;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  justify-content: space-between;
+}
+
+.chat_head > i {
+  font-size: 3rem;
+  color: white;
+}
+
+.chat_head > ul {
+  display: flex;
+  color: white;
+}
+
+.chat_head .user_image img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+}
+
+.chat {
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  position: fixed;
+  right: 8rem;
+  bottom: 12rem;
+  z-index: 600;
+  border-radius: 1rem;
+  border: 0.1rem solid silver;
+}
+.chatbox_container {
+  height: 40rem;
+  background-color: white;
+  width: 35rem;
+
+  font-family: "Inter";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.chatbox {
+  width: 6rem;
+  height: 6rem;
+  background-color: #ff4040;
+  color: white;
+  border-radius: 100%;
+  position: fixed;
+  right: 5rem;
+  bottom: 5rem;
+  z-index: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  transform: 0.6s;
+}
+
+.chatbox:hover {
+  background-color: #f76868;
+}
+
+.main_chat > li {
+  margin-top: 1rem;
+}
+
+.main_chat > .bot p {
+  border: 0.1rem solid silver;
+  display: inline-block;
+  padding: 1rem;
+  border-top-left-radius: 1.8rem;
+  border-top-right-radius: 1.8rem;
+  border-bottom-right-radius: 1.8rem;
+}
+
+.main_chat > .user {
+  display: flex;
+  justify-content: flex-end;
+}
+.main_chat > .user p {
+  text-align: right;
+  border-top-left-radius: 1.8rem;
+  padding: 1rem;
+  display: inline-block;
+  background: #ff4040;
+  color: white;
+  border-top-right-radius: 1.8rem;
+  border-bottom-left-radius: 1.8rem;
+}
+
+.message_input {
+  display: flex;
+  align-items: center;
+  border-top: 0.1rem solid silver;
+}
+
+.message_input > input {
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.message_input > i {
+  color: silver;
+  font-size: 3rem;
+  padding-inline: 1rem;
+}
+
+.message_input > i:hover {
+  color: #3c4049;
+}
+
+.main_chat {
+  padding-inline: 1rem;
+  height: 28rem;
+  overflow-y: scroll;
+}
+
+.main_chat::-webkit-scrollbar {
+  display: none;
+}

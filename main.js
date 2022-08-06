@@ -149,3 +149,11 @@ gsap.fromTo([
   },
   { translateY: "0rem", opacity: 1 },
 ]);
+
+/* ------------------------------ selectoptionx ----------------------------- */
+
+$(document).ready(function () {
+  $(".chatbox").click(function () {
+    $(".chatbox_container").fadeToggle();
+  });
+});

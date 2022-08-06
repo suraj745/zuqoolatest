@@ -1,0 +1,70 @@
+img {
+  width: 100%;
+}
+
+#hero-partner-container {
+  background: url(/images/partnerHero.webp);
+  background-size: cover;
+  height: 100vh;
+}
+
+#hero-partner-container h1 {
+  font-weight: 700;
+  font-size: clamp(3rem, 4vw, 3.6rem);
+  color: #ffffff;
+  margin: 3rem 0rem;
+}
+
+#hero-partner-container a {
+  background: #ff4040;
+  border-radius: 10px;
+  width: max-content;
+  display: block;
+  padding: 1rem 3rem;
+  color: #f8f8fa;
+  margin: 3rem auto 3rem;
+
+  font-weight: 500;
+  font-size: clamp(1rem, 4vw, 1.6rem);
+}
+
+#why-partner-container h1 {
+  color: #181818;
+}
+
+#why-partner-container .row p:nth-of-type(1) {
+  font-weight: 600;
+  font-size: clamp(2rem, 3vw, 2.2rem);
+  color: #3d3d3d;
+  margin: 2rem 0;
+}
+
+#why-partner-container .row p {
+  width: min(500px, 100%);
+  text-align: left;
+}
+
+#why-partner-container .row .img-wrapper img {
+  width: min(500px, 100%);
+}
+
+/* Our Partner */
+#our-partner h1 {
+  font-weight: 700;
+  font-size: clamp(3rem, 4vw, 3.6rem);
+  color: #000000;
+  margin: 3rem 0;
+}
+
+#partner_video_container {
+  margin: 3rem auto;
+}
+
+#partner_video_container .img-wrapper {
+  width: auto;
+  overflow: hidden;
+}
+
+#partner_video_container .img-wrapper img {
+  object-fit: cover;
+}

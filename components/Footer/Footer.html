@@ -1,0 +1,199 @@
+<footer class="container-fluid" id="footer_container">
+  <section class="container">
+    <section class="row content-pad flex-column">
+      <section class="col">
+        <section class="row justify-content-center align-items-between">
+          <section
+            class="col-lg-6 d-flex justify-content-center justify-content-lg-start"
+            id="footer_left"
+          >
+            <ul>
+              <li>
+                <h1>People are Saying About ZUQO</h1>
+              </li>
+              <li>
+                <p>
+                  Everything you need to accept to payment and grow your money
+                  of manage anywhere on planet
+                </p>
+              </li>
+              <li>
+                <img src="/svg/comma.svg" alt="" />
+              </li>
+              <li>
+                <p>
+                  I am very helped by this E-wallet application , my days are
+                  very easy to use this application and its very helpful in my
+                  life , even I can pay a short time 😍
+                </p>
+              </li>
+              <li>
+                <p>_Ashish dhawan</p>
+              </li>
+              <li class="d-flex">
+                <span id="person_1">
+                  <img src="/images/footer1.webp" alt="" />
+                </span>
+                <span id="person_2">
+                  <img src="/images/footer2.webp" alt="" />
+                </span>
+                <span id="person_3">
+                  <img src="/images/footer3.webp" alt="" />
+                </span>
+                <span id="person_4">
+                  <img src="/images/footer4.webp" alt="" />
+                </span>
+
+                <span id="person_5">
+                  <img src="/images/play.svg" alt="" />
+                </span>
+              </li>
+            </ul>
+          </section>
+          <section
+            class="col-lg-6 p-5 d-flex justify-content-center align-items-center justify-content-lg-end"
+            id="footer_right"
+          >
+            <form
+              class="d-flex justify-content-center align-items-center"
+              action="#"
+              id="footer_form_container"
+            >
+              <ul class="text-center">
+                <li>
+                  <img src="/svg/Logo White and Red-cropped.svg" alt="" />
+                </li>
+                <li>
+                  <h1 class="text-white">Get Started</h1>
+                </li>
+                <li>
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="enter your email"
+                  />
+                </li>
+                <li>
+                  <label for="message">Message</label>
+                  <input
+                    type="text"
+                    id="message"
+                    placeholder="what are you say ?"
+                  />
+                </li>
+                <li class="default_button">
+                  <button class="w-100">Request Demo</button>
+                </li>
+              </ul>
+            </form>
+          </section>
+        </section>
+      </section>
+      <section class="col" id="footer_bottom">
+        <section class="row content-pad">
+          <section class="col-lg-6" id="footer_bottom_left">
+            <ul>
+              <li class="px-4">
+                <img src="/svg/Logo White and Red-cropped.svg" alt="" />
+              </li>
+              <li class="px-4">
+                <p>Get started now try our product</p>
+              </li>
+              <li>
+                <input type="text" placeholder="Enter your email" />
+                <span id="email_arrow">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </li>
+            </ul>
+          </section>
+          <section class="col-lg-6 mt-5 mt-lg-0" id="footer_bottom_right">
+            <section class="list">
+              <ul>
+                <li class="text-white"><strong>Support</strong></li>
+                <li><a href="#">Help centre</a></li>
+                <li><a href="#">Account information</a></li>
+
+                <li><a href="#">About</a></li>
+
+                <li><a href="#">Contact us</a></li>
+              </ul>
+
+              <ul>
+                <li class="text-white">
+                  <strong>Help and Solution</strong>
+                </li>
+                <li><a href="#">Talk to support</a></li>
+                <li><a href="#">Support docs</a></li>
+
+                <li><a href="#">System status</a></li>
+
+                <li><a href="#">Covid responde</a></li>
+              </ul>
+
+              <ul>
+                <li class="text-white">
+                  <strong>Help and Solution</strong>
+                </li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Update</a></li>
+
+                <li><a href="#">Beta test</a></li>
+
+                <li><a href="#">Pricing product</a></li>
+              </ul>
+            </section>
+
+            <ul
+              id="terms"
+              class="text-lg-end text-white px-lg-5 mx-lg-5 text-start"
+            >
+              <li>Terms and Condtions . Privacy Policy</li>
+            </ul>
+          </section>
+        </section>
+      </section>
+    </section>
+  </section>
+</footer>
+
+<script>
+  gsap.fromTo(
+    ["#person_1,#person_2,#person_3,#person_4,#person_5"],
+    {
+      opacity: 0,
+      translateX: "-1000px",
+    },
+    {
+      opacity: 1,
+      translateX: "0px",
+      duration: 0.4,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: "#email",
+        start: "top center",
+        end: "top ",
+      },
+    }
+  );
+
+  gsap.fromTo(
+    ["#email_arrow"],
+    {
+      opacity: 0,
+      translateX: "-1000px",
+    },
+    {
+      opacity: 1,
+      translateX: "0px",
+      duration: 0.4,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: "#footer_bottom",
+        start: "top center",
+        end: "top ",
+      },
+    }
+  );
+</script>

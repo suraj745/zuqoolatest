@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/main.css" />
+
+    <!-- <link rel="stylesheet" href="/pages/healthcare/health.css" /> -->
+    <!-- <link rel="stylesheet" href="/pages/product/product.css" /> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+
+    <title>Vite App</title>
+  </head>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+    #home-v3 h1,
+    #home-v3 h2,
+    #home-v3 h3,
+    #home-v3 h4,
+    #home-v3 h5,
+    #home-v3 p,
+    #home-v3 li,
+    #home-v3 a {
+      font-family: Montserrat;
+      font-style: normal;
+    }
+    .btn-blue {
+      background: #ff4040 !important;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+      color: #ffffff;
+      max-width: 206px !important;
+      width: 100%;
+      height: 45px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: inherit;
+      border: none !important;
+    }
+
+    .btn-blue:hover {
+      background: none !important;
+      outline: 0.2rem solid #ff4040;
+      color: #ff4040 !important;
+    }
+    #home-v3 .h3-hero {
+      padding-top: 50px;
+      padding-bottom: 75px;
+      overflow: hidden;
+    }
+    #home-v3 .h3-hero img {
+      margin-top: -20px;
+      margin-bottom: -20px;
+    }
+    #home-v3 .h3-hero h1 {
+      font-weight: 900;
+      font-size: 70px;
+      line-height: 110%;
+      text-align: center;
+      color: #ff4040;
+    }
+    #home-v3 .h3-hero h1 span:not(.title-principal) {
+      color: #ff4040;
+      position: relative;
+    }
+    #home-v3 .h3-hero h1 span:not(.title-principal)::before {
+      content: "";
+      background-image: url("/wp-content/themes/unicon-child/framework/images/home-v3/title-icon-le.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 63px;
+      height: 100%;
+      top: 5px;
+      position: absolute;
+      left: -63px;
+    }
+    #home-v3 .h3-hero h1 span:not(.title-principal)::after {
+      content: "";
+      background-image: url("/wp-content/themes/unicon-child/framework/images/home-v3/title-icon-ri.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 63px;
+      height: 100%;
+      top: 5px;
+      position: absolute;
+      right: -65px;
+    }
+    #home-v3 .h3-hero h2 {
+      font-weight: normal;
+      font-size: 40px;
+      line-height: 130%;
+      text-align: center;
+      color: #153d5e;
+      max-width: 800px;
+      margin: 0 auto 10px;
+    }
+    #home-v3 .h3-hero p {
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+      color: #5b6d86;
+      max-width: 735px;
+      margin: 0 auto 40px;
+    }
+    #home-v3 .h3-hero a {
+      background: #48b2eb;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+      color: #ffffff;
+      max-width: 186px;
+      width: 100%;
+      height: 45px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: inherit;
+    }
+    #home-v3 .h3-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+    #home-v3 .h3-hero .svg-l {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+    }
+    #home-v3 .h3-hero .svg-r {
+      position: absolute;
+      right: 0;
+      bottom: -30px;
+      z-index: 1;
+    }
+
+    .title-principal {
+      display: block;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 130%;
+      text-align: center;
+      color: #707070;
+      max-width: 800px;
+      margin: 0 auto 10px;
+    }
+
+    @media (max-width: 991px) {
+      #home-v3 .h3-hero h1 {
+        font-size: 50px;
+      }
+      #home-v3 .h3-hero h2 {
+        font-size: 30px;
+      }
+      #home-v3 .h3-hero p {
+        font-size: 22px;
+      }
+      #home-v3 .h3-hero h1 span:not(.title-principal)::before {
+        top: 0px;
+        position: absolute;
+        left: -63px;
+      }
+      #home-v3 .h3-hero h1 span:not(.title-principal)::after {
+        top: -2px;
+        position: absolute;
+        right: -65px;
+      }
+      .title-principal {
+        font-size: 30px;
+      }
+    }
+    @media (max-width: 767px) {
+      #home-v3 .h3-hero h1 {
+        font-size: 40px;
+      }
+      #home-v3 .h3-hero h2 {
+        font-size: 25px;
+      }
+      #home-v3 .h3-hero p {
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
+      #home-v3 .h3-hero h1 span:not(.title-principal)::before {
+        top: 0px;
+        position: absolute;
+        left: -50px;
+      }
+      #home-v3 .h3-hero h1 span:not(.title-principal)::after {
+        top: -2px;
+        position: absolute;
+        right: -65px;
+      }
+      .title-principal {
+        font-size: 25px;
+      }
+    }
+    @media (max-width: 500px) {
+      #home-v3 .h3-hero h1 span:not(.title-principal)::before {
+        top: 2px;
+        position: absolute;
+        left: -40px;
+        width: 40px;
+      }
+      #home-v3 .h3-hero h1 span:not(.title-principal)::after {
+        top: 45px;
+        position: absolute;
+        right: -42px;
+        width: 40px;
+      }
+    }
+
+    /* Section 2 */
+    .h3-section-2 {
+      height: 800px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .h3-section-2 .col-12 img {
+      max-width: 1257px;
+      width: 100%;
+      margin: auto;
+    }
+    .h3-section-2 .btn-blue {
+      margin-top: -10px !important;
+      z-index: 999;
+      position: relative;
+    }
+    div.gs-home-video {
+      position: relative;
+      display: flex;
+      align-items: center;
+      max-width: 1257px;
+      width: 100%;
+      margin: -90px auto auto;
+      z-index: 9;
+      position: relative;
+    }
+    div.gs-home-video video {
+      width: 100%;
+      cursor: pointer;
+    }
+    .gs-home-video-icon {
+      color: rgba(0, 0, 0, 0.3);
+      display: block;
+      font-size: 75px;
+      left: 0;
+      margin: 0 auto;
+      padding: 8px 16px;
+      position: absolute;
+      right: 0;
+      border-radius: 50%;
+    }
+    .h3-section-2 .container-fluid {
+      position: relative;
+      z-index: 5;
+    }
+    .h3-section-2 .svg-rect {
+      position: absolute;
+      bottom: 0;
+      z-index: 3;
+    }
+    .h3-section-2 .svg-line {
+      position: absolute;
+      bottom: 0;
+      top: -75px;
+      z-index: 2;
+      width: 100%;
+      text-align: center;
+      overflow: hidden;
+    }
+    .h3-section-2 .svg-line img {
+      max-width: 1280px;
+    }
+    .h3-section-2 .svg-line svg {
+      width: 100%;
+    }
+    .h3-section-2 .bg-section {
+      position: absolute;
+      z-index: 1;
+      top: 0px;
+      background: #153d5e;
+      height: 800px;
+      width: 100%;
+      background: rgb(21, 61, 94);
+      background: -moz-linear-gradient(
+        174deg,
+        rgba(21, 61, 94, 1) 0%,
+        rgba(21, 61, 94, 1) 55%,
+        rgba(28, 70, 105, 1) 55%
+      );
+      background: -webkit-linear-gradient(
+        174deg,
+        rgba(21, 61, 94, 1) 0%,
+        rgba(21, 61, 94, 1) 55%,
+        rgba(28, 70, 105, 1) 55%
+      );
+      background: linear-gradient(
+        174deg,
+        rgba(21, 61, 94, 1) 0%,
+        rgba(21, 61, 94, 1) 55%,
+        rgba(28, 70, 105, 1) 55%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#153d5e",endColorstr="#1c4669",GradientType=1);
+      clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+    }
+    @media (max-width: 1024px) {
+      .h3-section-2 .bg-section {
+        height: 700px;
+      }
+      .h3-section-2 {
+        height: 700px;
+      }
+      .h3-section-2 .svg-line img {
+        height: 650px;
+      }
+    }
+    @media (max-width: 767px) {
+      .h3-section-2 .bg-section {
+        /*height: 580px;*/
+        height: 700px;
+      }
+      .h3-section-2 {
+        /*height: 580px;*/
+        height: 700px;
+      }
+      .h3-section-2 .svg-rect svg {
+        width: 300px;
+        height: 300px;
+      }
+      .h3-section-2 .svg-line img {
+        height: 500px;
+      }
+    }
+    @media (max-width: 550px) {
+      .h3-section-2 .bg-section {
+        height: 440px;
+      }
+      .h3-section-2 {
+        height: 440px;
+      }
+      .h3-section-2 .svg-line img {
+        height: 370px;
+      }
+      .h3-section-2 .svg-rect svg {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    @media (max-width: 550px) {
+      .h3-section-2 .btn-blue {
+        margin-top: -120px !important;
+      }
+      .h3-section-2 .bg-section {
+        height: 600px;
+      }
+      .h3-section-2 {
+        height: 600px;
+      }
+    }
+    @media (max-width: 425px) {
+      .h3-section-2 .btn-blue {
+        margin-top: -180px !important;
+      }
+    }
+
+    /* Section 3 */
+    .h3-section-3 {
+      background: #f9f9f9;
+      padding-top: 200px;
+      padding-bottom: 60px;
+      margin-top: -150px;
+      background-repeat: no-repeat;
+      background-position-x: 86%;
+      background-position-y: 170px;
+      background-size: 540px;
+    }
+    .h3-section-3 h2 {
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 49px;
+      letter-spacing: 0.02em;
+      color: #ff4040;
+      max-width: 490px;
+      margin-bottom: 42px;
+    }
+    .h3-section-3 .s3-icons p {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      color: #153d5e;
+      max-width: 235px;
+    }
+    @media (max-width: 1160px) {
+      .h3-section-3 {
+        background-position-x: 90%;
+        background-size: 480px;
+      }
+    }
+    @media (max-width: 991px) {
+      .h3-section-3 {
+        background-image: none !important;
+      }
+    }
+    @media (max-width: 575px) {
+      .h3-section-3 h2 {
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .h3-section-3 .s3-icons {
+        max-width: 263px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .h3-section-3 .s3-icons p {
+        max-width: fit-content;
+      }
+    }
+
+    /* Section 4 */
+    .h3-section-4 {
+      padding-top: 150px;
+      padding-bottom: 95px;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: 570px;
+    }
+    .h3-section-4 h2 {
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #153d5e;
+      margin-bottom: 20px;
+    }
+    .h3-section-4 h3 span {
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 50px;
+      color: #ff4040;
+      display: block;
+      padding-bottom: 13px;
+    }
+    .h3-section-4 h3 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 34px;
+      color: #153d5e;
+      max-width: 350px;
+      padding-left: 20px;
+      border-left: 5px solid #ff4040;
+    }
+    .h3-section-4 .content-quote p {
+      font-family: Montserrat;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.03em;
+      color: #5b6d86;
+      max-width: 475px;
+      margin-top: 70px;
+    }
+    .h3-section-4 .content-quote .author {
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.05em;
+      color: #5b6d86;
+      font-family: Montserrat;
+      font-style: normal;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .h3-section-4 .content-quote .title-author {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.05em;
+      color: #ff4040;
+      font-family: Montserrat;
+      font-style: normal;
+      margin: 10px 0 0 0;
+    }
+    @media (max-width: 1024px) and (min-width: 992px) {
+      .content-quote p {
+        max-width: 450px;
+      }
+    }
+    @media (max-width: 991px) {
+      .h3-section-4 {
+        background-image: none !important;
+        padding-top: 60px;
+        padding-bottom: 0;
+      }
+      .h3-section-4 img {
+        display: block;
+        max-width: 600px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+
+    /* Section 5 */
+    .h3-section-5 .container-image {
+      max-width: 1350px;
+      margin: auto;
+    }
+    .h3-section-5 .container-image > .container {
+      z-index: 2;
+    }
+    .h3-section-5 .img-sec-5 {
+      position: absolute;
+      left: 0;
+      top: 65px;
+      z-index: 1;
+    }
+    .h3-section-5 .img-sec-5 img {
+      max-width: 730px;
+      width: 100%;
+    }
+    .h3-section-5 .svg-l {
+      position: absolute;
+      bottom: 0;
+    }
+    .h3-section-5 {
+      padding-top: 55px;
+      padding-bottom: 70px;
+      background: rgb(11, 51, 84);
+      background: -moz-linear-gradient(
+        0deg,
+        rgba(11, 51, 84, 1) 0%,
+        rgba(11, 51, 84, 1) 47%,
+        rgba(21, 61, 94, 1) 47%,
+        rgba(21, 61, 94, 1) 100%
+      );
+      background: -webkit-linear-gradient(
+        0deg,
+        rgba(11, 51, 84, 1) 0%,
+        rgba(11, 51, 84, 1) 47%,
+        rgba(21, 61, 94, 1) 47%,
+        rgba(21, 61, 94, 1) 100%
+      );
+      background: linear-gradient(
+        0deg,
+        rgba(11, 51, 84, 1) 0%,
+        rgba(11, 51, 84, 1) 47%,
+        rgba(21, 61, 94, 1) 47%,
+        rgba(21, 61, 94, 1) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0b3354",endColorstr="#153d5e",GradientType=1);
+    }
+    .h3-section-5 h2 {
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 0px;
+    }
+    .h3-section-5 h3 span {
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 50px;
+      color: #8965ad;
+      display: block;
+      padding-top: 10px;
+    }
+    .h3-section-5 h3 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 34px;
+      color: #ffffff;
+      max-width: 350px;
+    }
+    .h3-section-5 .content-quote p {
+      font-family: Montserrat;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.03em;
+      color: #ffffff;
+      max-width: 475px;
+      margin-top: 70px;
+    }
+    .h3-section-5 .content-quote .author {
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+      font-family: Montserrat;
+      font-style: normal;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .h3-section-5 .content-quote .title-author {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.05em;
+      color: #ff4040;
+      margin: 10px 0 0 0;
+    }
+
+    @media (max-width: 1260px) and (min-width: 992px) {
+      .h3-section-5 .img-sec-5 img {
+        max-width: 580px;
+      }
+    }
+    @media (max-width: 1024px) and (min-width: 992px) {
+      .content-quote p {
+        max-width: 450px;
+      }
+    }
+    @media (max-width: 991px) {
+      .h3-section-5 h2 {
+        margin-bottom: 20px;
+      }
+      .h3-section-5 {
+        padding-top: 60px;
+        padding-bottom: 60;
+      }
+      .h3-section-5 .img-sec-5 {
+        position: relative;
+        z-index: 2;
+      }
+      .h3-section-5 img {
+        display: block;
+        max-width: 600px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .h3-section-5 .container-image > .container {
+        max-width: 600px;
+        margin: auto;
+      }
+    }
+
+    /* Section 6 */
+    .h3-section-6 {
+      padding-top: 100px;
+      padding-bottom: 110px;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: 530px;
+    }
+    .h3-section-6 h2 {
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #153d5e;
+      margin-bottom: 20px;
+    }
+    .h3-section-6 h3 span {
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 50px;
+      color: #fcc642;
+      display: block;
+      overflow-wrap: normal;
+    }
+    .h3-section-6 h3 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 34px;
+      color: #153d5e;
+      max-width: 350px;
+      padding-left: 20px;
+      border-left: 5px solid #fcc642;
+    }
+    .h3-section-6 .content-quote p {
+      font-family: Montserrat;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.03em;
+      color: #5b6d86;
+      max-width: 475px;
+      margin-top: 70px;
+    }
+    .h3-section-6 .content-quote .author {
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.05em;
+      color: #5b6d86;
+      font-family: Montserrat;
+      font-style: normal;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .h3-section-6 .content-quote .title-author {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.05em;
+      color: #ff4040;
+      margin: 10px 0 0 0;
+    }
+    @media (min-width: 1050px) {
+      .h3-section-6 {
+        background-size: 560px;
+      }
+    }
+    @media (max-width: 1024px) and (min-width: 992px) {
+      .content-quote p {
+        max-width: 450px;
+      }
+    }
+    @media (max-width: 991px) {
+      .h3-section-6 {
+        background-image: none !important;
+        padding-top: 60px;
+        padding-bottom: 0;
+      }
+      .h3-section-6 img {
+        display: block;
+        max-width: 600px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+
+    /* Section 7 */
+    .h3-section-7 .container-image {
+      max-width: 1350px;
+      margin: auto;
+    }
+    .h3-section-7 .container-image > .container {
+      z-index: 2;
+    }
+    .h3-section-7 .img-sec-5 {
+      position: absolute;
+      left: 0;
+      bottom: -90px;
+      z-index: 1;
+    }
+    .h3-section-7 .img-sec-5 img {
+      max-width: 625px;
+      width: 100%;
+    }
+    .h3-section-7 .svg-l {
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+    }
+    .h3-section-7 {
+      padding-top: 55px;
+      padding-bottom: 90px;
+      background: rgb(11, 51, 84);
+      background: -moz-linear-gradient(
+        0deg,
+        rgba(11, 51, 84, 1) 0%,
+        rgba(11, 51, 84, 1) 47%,
+        rgba(21, 61, 94, 1) 47%,
+        rgba(21, 61, 94, 1) 100%
+      );
+      background: -webkit-linear-gradient(
+        0deg,
+        rgba(11, 51, 84, 1) 0%,
+        rgba(11, 51, 84, 1) 47%,
+        rgba(21, 61, 94, 1) 47%,
+        rgba(21, 61, 94, 1) 100%
+      );
+      background: linear-gradient(
+        0deg,
+        rgba(11, 51, 84, 1) 0%,
+        rgba(11, 51, 84, 1) 47%,
+        rgba(21, 61, 94, 1) 47%,
+        rgba(21, 61, 94, 1) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0b3354",endColorstr="#153d5e",GradientType=1);
+    }
+    .h3-section-7 h2 {
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 0px;
+    }
+    .h3-section-7 h3 span {
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 50px;
+      color: #ec246d;
+      display: block;
+      padding-top: 10px;
+    }
+    .h3-section-7 h3 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 34px;
+      color: #ffffff;
+      max-width: 350px;
+    }
+    .h3-section-7 .content-quote p {
+      font-family: Montserrat;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.03em;
+      color: #ffffff;
+      max-width: 475px;
+      margin-top: 70px;
+    }
+    .h3-section-7 .content-quote .author {
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+      font-family: Montserrat;
+      font-style: normal;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .h3-section-7 .content-quote .title-author {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.05em;
+      color: #ff4040;
+      margin: 10px 0 0 0;
+    }
+
+    @media (max-width: 1065px) and (min-width: 992px) {
+      .h3-section-7 .img-sec-5 img {
+        max-width: 580px;
+      }
+      .h3-section-7 {
+        padding-top: 55px;
+        padding-bottom: 50px;
+      }
+      .h3-section-7 .img-sec-5 {
+        bottom: -50px;
+      }
+    }
+    @media (max-width: 1024px) and (min-width: 992px) {
+      .content-quote p {
+        max-width: 450px;
+      }
+    }
+    @media (max-width: 991px) {
+      .h3-section-7 {
+        padding-bottom: 10px;
+      }
+      .h3-section-7 .img-sec-5 {
+        bottom: -10px;
+      }
+      .h3-section-7 h2 {
+        margin-bottom: 20px;
+      }
+      .h3-section-7 {
+        padding-top: 60px;
+        padding-bottom: 60;
+      }
+      .h3-section-7 .img-sec-5 {
+        position: relative;
+        z-index: 2;
+      }
+      .h3-section-7 img {
+        display: block;
+        max-width: 600px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .h3-section-7 .container-image > .container {
+        max-width: 600px;
+        margin: auto;
+      }
+    }
+
+    /* Section 8 */
+    .h3-section-8 h3 span {
+      color: #569a86 !important;
+      padding-bottom: 13px;
+    }
+    .h3-section-8 h3 {
+      border-left: 5px solid #569a86 !important;
+    }
+
+    /* Section 9 */
+    .h3-section-9 {
+      background: #48b2eb;
+      padding-top: 90px;
+      padding-bottom: 85px;
+      overflow: hidden;
+    }
+    .h3-section-9 h2 {
+      font-weight: normal;
+      font-size: 40px;
+      line-height: 49px;
+      color: #ffffff;
+      padding-bottom: 100px;
+    }
+    .h3-section-9 .title-section-9 {
+      font-weight: normal;
+      font-size: 40px;
+      line-height: 49px;
+      color: #ffffff;
+      padding-bottom: 100px;
+    }
+    .h3-section-9 h2 b {
+      font-weight: 800;
+    }
+    .h3-section-9 .title-section-9 b {
+      font-weight: 800;
+    }
+    .h3-section-9 .btn-cta2:after {
+      content: "\f1ea" !important;
+      content: none !important;
+    }
+    .h3-section-9 .bg-sec-9 {
+      display: flex;
+      position: absolute;
+      max-width: 880px;
+      width: 100%;
+      top: -60px;
+      height: 880px;
+      right: -325px;
+      background: #52bcf5;
+      border-radius: 50%;
+    }
+    .h3-section-9 .bg-sec-9 .row {
+      height: 380px;
+      max-width: 530px;
+      margin: auto;
+      margin-left: 0;
+      padding-left: 50px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+    .h3-section-9 .svg-c {
+      position: absolute;
+      bottom: -8px;
+    }
+    @media (max-width: 1199px) {
+      .h3-section-9 .bg-sec-9 {
+        max-width: 950px;
+        height: 950px;
+        right: -400px;
+      }
+    }
+    @media (max-width: 991px) {
+      .h3-section-9 {
+        padding-bottom: 0;
+        padding-top: 60px;
+      }
+      .h3-section-9 .svg-c {
+        bottom: 135px;
+      }
+      .h3-section-9 .bg-sec-9 .row {
+        height: auto;
+        max-width: 800px;
+        margin: auto;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .h3-section-9 .bg-sec-9 .row img {
+        height: 50px;
+      }
+      .h3-section-9 h2 {
+        padding-bottom: 20px;
+      }
+
+      .h3-section-9 .title-section-9 {
+        padding-bottom: 20px;
+      }
+
+      .h3-section-9 .bg-sec-9 {
+        position: relative;
+        max-width: 100%;
+        height: auto;
+        padding-top: 40px;
+        margin-top: 20px;
+        right: 0;
+        top: 0;
+        border-radius: 0;
+      }
+    }
+    @media (max-width: 767px) {
+      .h3-section-9 h2 {
+        font-size: 30px;
+        line-height: 39px;
+      }
+
+      .h3-section-9 .title-section-9 {
+        font-size: 30px;
+        line-height: 39px;
+      }
+    }
+
+    /* Section btn */
+    .p-60-25 {
+      padding: 60px 25px;
+    }
+    #section_cta_banner {
+      background-color: #48b2eb;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      background-blend-mode: luminosity;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    #section_cta_banner .img-l {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    #section_cta_banner .svg-r {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    #section_cta_banner [id="cta-banner-2__text"] h4 {
+      font-size: 2.3em;
+      font-weight: 300;
+      margin-bottom: 0.55em;
+      text-transform: unset !important;
+    }
+    #section_cta_banner [id="cta-banner-2__text"] h4 b {
+      font-weight: 800;
+    }
+    .btn-cta2:after {
+      content: "\f073";
+      content: none !important;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 300;
+      margin-left: 7px;
+    }
+
+    .btn-cta2,
+    .btn-cta2.active,
+    .btn-cta2:active,
+    .btn-cta2:focus {
+      filter: none;
+
+      box-sizing: border-box;
+      border-radius: 4px;
+      font-family: "Montserrat";
+      padding: 0.7rem 1rem;
+      text-align: center;
+
+      letter-spacing: 0px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+      color: #ffffff;
+      text-transform: initial;
+      background: none !important;
+    }
+    @media (max-width: 767px) {
+      #section_cta_banner {
+        background-image: none !important;
+      }
+      .h3-section-6 h3 {
+        margin-bottom: 6px;
+      }
+    }
+
+    /* Section 10 */
+    .h3-section-10 {
+      padding-top: 90px;
+      padding-bottom: 60px;
+    }
+    .h3-section-10 .svg-r {
+      position: absolute;
+      bottom: -18px;
+      right: 0;
+    }
+    .h3-section-10 h3 {
+      font-weight: normal;
+      font-size: 40px;
+      line-height: 49px;
+      text-align: center;
+      letter-spacing: 0.02em;
+      color: #153d5e;
+    }
+    .h3-section-10 h3 b {
+      font-weight: 800;
+    }
+    .h3-section-10 .sub-title-section-10 {
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 54px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #153d5e;
+      margin-bottom: 20px;
+    }
+    .h3-section-10 .grid-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 26px;
+    }
+    .h3-section-10 .grid-card .card-px {
+      border-radius: 5px;
+      filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.16));
+      position: relative;
+    }
+    .h3-section-10 .grid-card .card-box {
+      padding: 30px 0px 25px 0px;
+      clip-path: polygon(0% 0%, 100% 0, 100% 90%, 90% 100%, 0% 100%);
+      -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 90% 100%, 0% 100%);
+      height: 100%;
+      background: #fff;
+      -webkit-transform: translate3d(0, 0, 0);
+    }
+    .h3-section-10 .grid-card .card-px .icon {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    .h3-section-10 .grid-card .card-px .card-title {
+      border-bottom: 2px solid #e1e1e1;
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+      min-height: 75px;
+    }
+    .h3-section-10 .grid-card .card-px .card-content {
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-bottom: 0px;
+    }
+    .h3-section-10 .grid-card .text-card-title {
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 30px;
+      color: #153d5e;
+      margin-top: 10px;
+      margin-bottom: 8px;
+    }
+    .h3-section-10 .grid-card .text-card-sub-title {
+      font-style: italic !important;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      color: #48515b;
+      margin-bottom: 8px;
+    }
+    .h3-section-10 .grid-card p {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      display: flex;
+      align-items: center;
+      color: #48515b;
+    }
+    .h3-section-10 .line-pricing {
+      border-bottom: 2px solid #e1e1e1;
+      display: block;
+      height: 2px;
+      width: 100%;
+      padding-top: 75px;
+      margin-bottom: 45px;
+    }
+    .h3-section-10 .btn {
+      background: #48b2eb;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+      color: #ffffff;
+      max-width: 240px;
+      width: 100%;
+      height: 45px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: capitalize;
+      margin-top: 60px;
+    }
+    @media (max-width: 991px) and (min-width: 768px) {
+      .h3-section-10 .grid-card .text-card-title {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 5px;
+      }
+      .h3-section-10 .grid-card .text-card-sub-title {
+        font-size: 11px;
+        line-height: 13px;
+      }
+      .h3-section-10 .grid-card .card-px .card-title {
+        min-height: 60px;
+      }
+    }
+    @media (max-width: 991px) {
+      .h3-section-10 {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    }
+    @media (max-width: 767px) {
+      .h3-section-10 .grid-card {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 550px) {
+      .h3-section-10 h3 {
+        font-size: 30px;
+        line-height: 30px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .h3-section-3 h2 {
+        font-size: 30px;
+        line-height: 39px;
+      }
+      .h3-section-3 .s3-icons p {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      .h3-section-4 h3 span,
+      .h3-section-5 h3 span,
+      .h3-section-6 h3 span,
+      .h3-section-7 h3 span {
+        font-size: 35px;
+        line-height: 42px;
+        padding-bottom: 6px;
+      }
+      .content-quote p {
+        margin-top: 50px !important;
+      }
+
+      .content-quote .title-author {
+        margin-top: 10px !important;
+      }
+      #section_cta_banner [id="cta-banner-2__text"] h4 {
+        font-size: 30px;
+      }
+    }
+    /* Link Quote */
+    .btn-quote {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+      color: #ff4040;
+      margin-top: 25px;
+      display: flex;
+      align-items: center;
+      grid-gap: 4px;
+    }
+    .btn-quote:hover {
+      text-decoration: none;
+      color: #dd1e1e;
+    }
+    @media (min-width: 992px) {
+      .btn-quote.btn-mb {
+        margin-bottom: -20px;
+      }
+    }
+    @media (min-width: 1066px) {
+      .btn-quote.btn-mb {
+        margin-bottom: -45px;
+      }
+    }
+
+    /* Banner */
+    #banner-home > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 52px;
+    }
+    #banner-home p {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+      margin-bottom: 0px;
+    }
+    #banner-home a {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+      color: #0e3d5d;
+      padding-left: 20px;
+    }
+    #banner-home a svg {
+      margin-left: 7px;
+    }
+    @media (max-width: 767px) {
+      #banner-home > div {
+        display: block;
+        text-align: center;
+        padding: 10px 15px;
+      }
+      #banner-home a {
+        padding-left: 0px;
+      }
+      #banner-home p {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+  <body>
+    <section class="navbar-comp"></section>
+    <div id="home-v3">
+      <div id="banner-home" style="background: #ff4040">
+        <div class="container-1260">
+          <p>Gainsight's Pulse Conference Returns to San Francisco</p>
+          <a href="#" style="color: rgb(252, 198, 66)"
+            >Register Today!<i
+              class="fas fa-arrow-right ml-1"
+              aria-hidden="true"
+            ></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="h3-hero position-relative">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+              <img src="" alt="" />
+              <h1
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+              >
+                For Durable Growth That<br /><span>Withstands the Market</span>
+                <br />
+                <span
+                  class="title-principal"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="500"
+                  data-aos-once="true"
+                >
+                  Higher net revenue retention. <br />Greater product adoption.
+                </span>
+              </h1>
+              <p
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="1000"
+                data-aos-once="true"
+                style="
+                  font-style: normal;
+                  font-weight: 600;
+                  font-size: 24px;
+                  line-height: 29px;
+                  text-align: center;
+                  color: #dd1e1e;
+                "
+              >
+                ADVANTAGE, YOU
+              </p>
+
+              <a href="#" class="btn btn-blue mt-5">Schedule a Demo</a>
+            </div>
+          </div>
+        </div>
+        <div class="svg-l">
+          <svg
+            width="280"
+            height="325"
+            viewBox="0 0 280 325"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M63.6283 -130.197L-110 274.198H107.302L280 -130.197H63.6283Z"
+              fill="#F9F9F9"
+            ></path>
+            <g style="mix-blend-mode: multiply">
+              <path
+                d="M117.492 106.492L24 324.243H141.009L234 106.492H117.492Z"
+                fill="#F7F7F7"
+                fill-opacity="0.8"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="svg-r">
+          <svg
+            width="203"
+            height="335"
+            viewBox="0 0 203 335"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M144.328 0.623779L0.765625 334.994H180.44L323.233 0.623779H144.328Z"
+              fill="#F9F9F9"
+              fill-opacity="0.9"
+            ></path>
+            <g style="mix-blend-mode: multiply">
+              <path
+                d="M77.0894 52.5068L9 211.093H94.2164L161.941 52.5068H77.0894Z"
+                fill="#F7F7F7"
+                fill-opacity="0.8"
+              ></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="h3-section-2 position-relative">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 text-center">
+              <div class="gs-home-video">
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                <lottie-player
+                  src="https://assets9.lottiefiles.com/packages/lf20_ccwkeg6p.json"
+                  background="transparent"
+                  speed="1"
+                  style="width: 1257px; height: 679px"
+                  loop=""
+                  autoplay=""
+                ></lottie-player>
+              </div>
+              <a
+                class="btn btn-blue mt-5 d-flex align-items-center"
+                style="font-size: 1.6rem; color: white; font-weight: 600"
+                href="#"
+                >Tour the Product</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="bg-section"></div>
+        <div class="bg-down"></div>
+        <div class="svg-rect">
+          <svg
+            width="225"
+            height="445"
+            viewBox="0 0 225 445"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              r="33.2405"
+              transform="matrix(-1 0 0 1 12.3884 221.881)"
+              fill="#FCC642"
+            ></circle>
+            <circle
+              r="25.5034"
+              transform="matrix(-1 0 0 1 12.0005 221.708)"
+              stroke="#FCC642"
+              stroke-width="51"
+              stroke-dasharray="3 3"
+            ></circle>
+            <path
+              class="path-1"
+              d="M-161.89 260.984L-159.688 259.67L-162.104 259.124L-225.422 244.834C-207.429 235.735 -190.073 226.964 -172.132 217.899L-170.706 217.178L-171.896 216.194L-216.074 179.666C-190.571 177.671 -165.875 175.742 -140.697 173.779L-139.442 173.681L-139.776 172.456L-154.743 117.43L-89.1288 138.291L-88.046 138.636L-87.8292 137.469L-75.0359 68.5783L-29.6935 113.707L-28.7941 114.602L-28.1409 113.441L10.4121 44.9147L22.6775 97.9103L22.9924 99.2711L24.1611 98.4687L81.4324 59.1491L59.7564 111.734L58.8275 113.988L61.0181 113.02C86.9036 101.587 112.357 90.3429 137.696 79.1496L163.055 67.9477L95.6066 146.258L93.926 148.209L96.4026 147.915C124.792 144.548 152.384 141.279 179.956 138.013L114.146 185.755L112.753 186.766L114.234 187.491L171.297 215.437C150.687 223.067 130.465 230.557 110.187 238.068C103.095 240.695 95.9958 243.325 88.871 245.963L87.6934 246.4L88.3163 247.464L117.367 297.115L44.2246 293.526L43.1401 293.472L43.1464 294.589L43.524 362.332L-20.3765 314.618L-21.2687 313.952L-21.8342 314.979L-58.5403 381.605L-75.6887 311.913L-76.1204 310.158L-77.3575 311.533C-88.9826 324.456 -100.45 337.212 -111.976 350.033C-118.97 357.812 -125.986 365.616 -133.071 373.495L-130.215 318.531L-130.127 316.846L-131.616 317.624C-141.607 322.848 -151.501 328.023 -161.343 333.171C-173.813 339.694 -186.2 346.173 -198.593 352.651L-153.523 294.372L-151.802 292.146L-154.467 292.778C-160.381 294.181 -166.27 295.577 -172.137 296.968C-200.14 303.608 -227.651 310.132 -255.138 316.646C-236.032 305.244 -216.919 293.834 -197.64 282.325C-185.798 275.256 -173.894 268.149 -161.89 260.984Z"
+              stroke="#8965AD"
+              stroke-width="2"
+            ></path>
+          </svg>
+        </div>
+        <div class="svg-line">
+          <img src="/images/line-fix-v2.png" alt="" />
+        </div>
+      </div>
+
+      <div
+        class="h3-section-3 position-relative"
+        style="background-image: url('/images/round.png')"
+      >
+        <div class="container">
+          <div class="row mb-0">
+            <div class="col-md-12 col-lg-6">
+              <h2 data-aos="fade-up" data-aos-duration="1000">
+                <b>Digital Superpowers</b> to Scale Growth
+              </h2>
+              <div class="row mb-0 s3-icons">
+                <div class="col-12 col-sm-6 pb-4">
+                  <img
+                    style="max-width: 7rem"
+                    src="/images/icon-coins.svg"
+                    alt=""
+                  />
+                  <p>Increase Net<br />Revenue Retention</p>
+                </div>
+                <div class="col-12 col-sm-6 pb-4">
+                  <img
+                    style="max-width: 7rem"
+                    src="/images/icon-eye.svg"
+                    alt=""
+                  />
+                  <p>View Customer Health &amp; Usage In a Single Place</p>
+                </div>
+                <div class="col-12 col-sm-6 pb-4">
+                  <img
+                    style="max-width: 7rem"
+                    src="/images/icon-users.svg"
+                    alt=""
+                  />
+                  <p>Scale Customer<br />Success Teams</p>
+                </div>
+                <div class="col-12 col-sm-6 pb-4">
+                  <img
+                    style="max-width: 7rem"
+                    src="/images/icon-sync.svg"
+                    alt=""
+                  />
+                  <p>Accelerate Onboarding &amp; Product Adoption</p>
+                </div>
+                <div class="col-12 col-sm-6 pb-4">
+                  <img
+                    style="max-width: 7rem"
+                    src="/images/icon-analytics.svg"
+                    alt=""
+                  />
+                  <p>Launch/Manage Product-Led Growth</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 text-center d-block d-lg-none">
+              <img src="/images/round.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        class="h3-section-4 position-relative overflow-hidden"
+        style="background-image: url('/images/boy.webp')"
+      >
+        <div class="container">
+          <div class="row overflow-hidden mb-0">
+            <div class="col-md-12 col-lg-8">
+              <h2 data-aos="fade-up" data-aos-duration="1000">
+                RICH PRODUCT &amp; CUSTOMER ANALYTICS
+              </h2>
+              <h3>
+                <span
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="500"
+                  >Scale retention efforts</span
+                >
+                with usage analytics and health scores.
+              </h3>
+              <div class="content-quote">
+                <p>
+                  <em
+                    >“Gainsight PX enables us to do the science of customer
+                    success and churn by making it possible to listen to our
+                    customers in a scalable, data-driven manner.”</em
+                  >
+                </p>
+                <p class="author">DOUG MILLER</p>
+                <p class="title-author">
+                  Former Customer Experience Advisor, <b>Onclusive</b>
+                </p>
+                <a class="btn-quote" href="#"
+                  >Take a Tour of Gainsight<i
+                    class="fa-solid fa-arrow-right"
+                  ></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 px-0 d-block d-lg-none">
+          <img src="/images/boy.webp" alt="" class="me-0" />
+        </div>
+      </div>
+
+      <div class="h3-section-5 position-relative">
+        <div class="svg-l">
+          <svg
+            width="246"
+            height="289"
+            viewBox="0 0 246 289"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M-140.808 261.3L-138.606 259.986L-141.022 259.44L-204.34 245.15C-186.347 236.051 -168.991 227.28 -151.05 218.214L-149.624 217.494L-150.814 216.51L-194.992 179.982C-169.489 177.987 -144.793 176.058 -119.615 174.095L-118.36 173.997L-118.694 172.772L-133.661 117.745L-68.0468 138.607L-66.9639 138.951L-66.7472 137.784L-53.9538 68.8942L-8.61145 114.023L-7.71208 114.918L-7.05886 113.757L31.4942 45.2306L43.7595 98.2262L44.0744 99.587L45.2432 98.7846L102.514 59.465L80.8385 112.05L79.9095 114.304L82.1001 113.336C107.986 101.902 133.439 90.6588 158.778 79.4655L184.137 68.2637L116.689 146.573L115.008 148.525L117.485 148.231C145.874 144.864 173.466 141.595 201.038 138.329L135.228 186.071L133.835 187.082L135.316 187.807L192.379 215.753C171.769 223.383 151.547 230.873 131.269 238.384C124.177 241.011 117.078 243.64 109.953 246.279L108.775 246.716L109.398 247.78L138.449 297.431L65.3067 293.842L64.2222 293.788L64.2284 294.905L64.606 362.648L0.705503 314.934L-0.186668 314.268L-0.752208 315.295L-37.4583 381.921L-54.6066 312.229L-55.0384 310.474L-56.2754 311.849C-67.9006 324.772 -79.3682 337.528 -90.8941 350.349C-97.8881 358.128 -104.904 365.932 -111.989 373.811L-109.133 318.847L-109.045 317.162L-110.534 317.94C-120.525 323.164 -130.419 328.339 -140.261 333.487C-152.731 340.01 -165.118 346.489 -177.511 352.967L-132.441 294.688L-130.72 292.462L-133.385 293.094C-139.299 294.496 -145.188 295.893 -151.055 297.284C-179.058 303.924 -206.569 310.447 -234.056 316.962C-214.95 305.56 -195.837 294.15 -176.558 282.641C-164.716 275.572 -152.812 268.465 -140.808 261.3Z"
+              stroke="#8965AD"
+              stroke-width="2"
+            ></path>
+          </svg>
+        </div>
+        <div class="container-image position-relative">
+          <div class="container">
+            <div class="row overflow-hidden mb-0">
+              <div class="col-md-12">
+                <h2>renewal optimization</h2>
+              </div>
+              <div class="col-md-12 col-lg-5 offset-lg-7">
+                <h3>
+                  Scale renewals management
+                  <span>without increasing cost.</span>
+                </h3>
+                <div class="content-quote">
+                  <p>
+                    <em
+                      >“Using Gainsight for renewal management has allowed us to
+                      both specialize and scale our Customer Success teams. We
+                      have built an automated renewal system that can and has
+                      frequently facilitated a zero-touch renewal-plus-growth
+                      process.”</em
+                    >
+                  </p>
+                  <p class="author">BEN MICHAEL</p>
+                  <p class="title-author">
+                    Senior Manager, Customer Success, JAMF
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            class="col-12 px-0 img-sec-5"
+          >
+            <img
+              src="/images/laptop.png"
+              alt=""
+              class="me-0 d-none d-lg-block"
+            />
+            <img
+              src="/images/laptop.png"
+              alt=""
+              class="me-0 d-md-block d-lg-none"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="h3-section-6 position-relative"
+        style="background-image: url('/images/yellowgirl.webp')"
+      >
+        <div class="container">
+          <div class="row mb-0">
+            <div class="col-md-12 col-lg-8">
+              <h2>CUSTOMER JOURNEY ORCHESTRATION</h2>
+              <h3><span>Scale customer engagement.</span></h3>
+              <div class="content-quote">
+                <p>
+                  <em
+                    >“I think of Gainsight as the vehicle that brings together
+                    all the different customer data points and uses them as
+                    triggers to automate pieces of our customer journey in a
+                    straightforward way.”</em
+                  >
+                </p>
+                <p class="author">VALERY SKIRSKAYA</p>
+                <p class="title-author">
+                  Customer Success Operations Manager, Glint
+                </p>
+                <a class="btn-quote" href="#"
+                  >Browse Demo Videos On Demand<i
+                    class="fa-solid fa-arrow-right"
+                  ></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 px-0 d-block d-lg-none">
+          <img src="/images/yellowgirl.webp" alt="" class="me-0" />
+        </div>
+      </div>
+
+      <div class="h3-section-7 position-relative">
+        <div class="container-image position-relative">
+          <div class="container">
+            <div class="row mb-0">
+              <div class="col-md-12">
+                <h2>Low/no code in-app product guides</h2>
+              </div>
+              <div class="col-md-12 col-lg-5 offset-lg-7">
+                <h3>
+                  Reduce product onboarding time to<span>mere minutes.</span>
+                </h3>
+                <div class="content-quote">
+                  <p>
+                    <em
+                      >“Gainsight PX provides better insight into the user
+                      experience because it is objective. Plus, it enables us to
+                      make changes in response within minutes and hours instead
+                      of days and weeks.”</em
+                    >
+                  </p>
+                  <p class="author">YARIV ZUR</p>
+                  <p class="title-author">VP of Product, Anodot</p>
+                  <a class="btn-quote btn-mb" href="#"
+                    >Try Gainsight PX for Free<i
+                      class="fa-solid fa-arrow-right"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 px-0 img-sec-5">
+            <img
+              src="/images/mobile2.webp"
+              alt=""
+              class="me-0 d-none d-lg-block"
+            />
+            <img
+              src="/images/mobile2.webp"
+              alt=""
+              class="me-0 d-md-block d-lg-none"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="h3-section-6 overflow-hidden h3-section-8 position-relative .animate_lap"
+        style="background-image: url('/images/men-laptop.webp')"
+      >
+        <div class="container">
+          <div class="row mb-0">
+            <div class="col-md-12 col-lg-8">
+              <h2 data-aos="fade-up" data-aos-duration="1000">
+                USER SEGMENTATION &amp; IN-APP COMMS
+              </h2>
+              <h3
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="500"
+              >
+                <span>Increase adoption</span> with contextual in-app
+                engagement.
+              </h3>
+              <div class="content-quote">
+                <p>
+                  <em
+                    >“After testing this in-app engagement for 2 months, we saw
+                    an 8% increase in targeted customers using our automation
+                    feature, which is very impressive.”</em
+                  >
+                </p>
+                <p class="author">IGOR KRANJCEC</p>
+                <p class="title-author">Product Marketing Manager, INFOBIP</p>
+                <a class="btn-quote" href="#"
+                  >Try Gainsight PX for Free<i
+                    class="fa-solid fa-arrow-right"
+                  ></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 px-0 d-block d-lg-none">
+          <img src="/images/men-laptop.webp" alt="" class="me-0" />
+        </div>
+      </div>
+
+      <div class="h3-section-9 position-relative">
+        <div class="svg-c">
+          <svg
+            width="917"
+            height="630"
+            viewBox="0 0 917 630"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M-71.4386 381.659C-53.8762 410.709 -5.87719 466.796 45.6199 458.744C109.991 448.68 131.282 375.975 99.2709 364.764C67.2601 353.553 55.5344 410.482 143.889 430.705C232.243 450.929 434.695 371.623 546.97 455.046C659.245 538.469 627.183 664.356 599.678 655.678C572.173 647 592.534 421.371 679.251 337.248C773.717 245.609 826.79 277.436 834.719 345.219"
+              stroke="url(#paint0_linear_1229_3185)"
+              stroke-width="2"
+            ></path>
+            <circle
+              cx="525.823"
+              cy="444.246"
+              r="15"
+              transform="rotate(-67.0134 525.823 444.246)"
+              fill="#EC246D"
+            ></circle>
+            <defs>
+              <linearGradient
+                id="paint0_linear_1229_3185"
+                x1="252.717"
+                y1="162.327"
+                x2="592.672"
+                y2="664.756"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#48B2EB"></stop>
+                <stop offset="1" stop-color="#EC246D"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-lg-6">
+              <svg
+                width="47"
+                height="44"
+                viewBox="0 0 47 44"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.9244 0L0 43.0987H26.1877L47 0H20.9244Z"
+                  fill="white"
+                ></path>
+              </svg>
+              <p class="title-section-9">
+                Companies worldwide look to Gainsight for scalable, durable
+                growth through product-led, customer-led, and community-led
+                strategies.
+              </p>
+              <a class="btn btn-cta2 active" href="#">Customer Stories</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-sec-9">
+          <div class="row">
+            <div class="col-6 col-sm-4 col-md-2 col-lg-6 pb-4">
+              <img style="max-width: 10rem" src="/images/brand1.png" alt="" />
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 col-lg-6 pb-4">
+              <img style="max-width: 10rem" src="/images/brand2.png" alt="" />
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 col-lg-6 pb-4">
+              <img style="max-width: 10rem" src="/images/brand3.png" alt="" />
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 col-lg-6 pb-4">
+              <img style="max-width: 10rem" src="/images/brand4.png" alt="" />
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 col-lg-6 pb-4">
+              <img style="max-width: 10rem" src="/images/brand5.png" alt="" />
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 col-lg-6 pb-4">
+              <img
+                style="max-width: 10rem"
+                src="/images/Splunk_logo_grey2.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <div
+          id="section_cta_banner"
+          class="position-relative"
+          style="background-image: url('/images/pop_grid.png')"
+        >
+          <div class="img-l" id="image_animate">
+            <img
+              src="/wp-content/themes/unicon-child/framework/images/home-v3/figure-cta.png"
+              alt=""
+            />
+          </div>
+          <div class="svg-r">
+            <svg
+              width="359"
+              height="300"
+              viewBox="0 0 359 300"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="64.6667"
+                cy="179.667"
+                r="15"
+                transform="rotate(-67.0134 64.6667 179.667)"
+                fill="#EC246D"
+              ></circle>
+              <path
+                d="M115.756 -29.0427C89.3129 17.6619 53.8995 114.959 123.79 130.512C211.153 149.953 172.619 63.0066 118.927 69.4988C65.2345 75.991 -60.1225 162.835 176.475 229.827C365.753 283.421 469.091 370.411 497.101 407.208"
+                stroke="#FCC642"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M259.057 135.726L261.411 134.708L259.086 133.854L229.303 122.906C238.531 119.664 247.472 116.524 256.701 113.285L258.209 112.756L257.157 111.626L238.092 91.1459C250.669 91.8032 262.88 92.4431 275.322 93.0969L276.578 93.1629L276.407 91.9052L272.613 64.0346L303.561 78.5337L304.59 79.0158L304.956 77.8869L315.69 44.8228L335.06 69.9113L335.836 70.9157L336.634 69.8493L359.908 38.7702L362.479 65.1529L362.614 66.5431L363.877 65.8994L394.006 50.5439L380.369 74.2901L379.155 76.404L381.453 75.7292C395.299 71.6632 408.913 67.6648 422.467 63.6841L433.98 60.3028L396.307 93.9812L394.388 95.6976L396.881 95.7281C410.818 95.8986 424.381 96.0666 437.918 96.2344L403.16 115.101L401.647 115.922L403.022 116.834L429.053 134.101C418.538 136.5 408.206 138.858 397.847 141.223C394.081 142.083 390.311 142.944 386.528 143.807L385.304 144.087L385.783 145.223L396.811 171.374L361.007 164.883L359.939 164.69L359.8 165.797L355.631 199.049L327.199 171.387L326.401 170.61L325.707 171.555L303.479 201.796L299.561 166.641L299.361 164.845L297.956 166.048C291.23 171.805 284.594 177.489 277.924 183.201C274.207 186.385 270.479 189.577 266.719 192.797L271.561 166.521L271.867 164.861L270.289 165.44C264.891 167.419 259.545 169.381 254.228 171.332C248.181 173.55 242.171 175.755 236.163 177.958L261.234 153.045L263.23 151.062L260.506 151.342C257.407 151.661 254.322 151.978 251.249 152.294C237.734 153.685 224.44 155.053 211.172 156.416C220.594 152.346 230.027 148.27 239.534 144.161C246.001 141.367 252.501 138.558 259.057 135.726Z"
+                stroke="#8965AD"
+                stroke-width="2"
+              ></path>
+            </svg>
+          </div>
+          <div class="container-1260 p-60-25">
+            <div class="row mb-0">
+              <div class="col-md-12">
+                <div id="cta-banner-2__text" class="text-center">
+                  <h4 class="text-white">See Gainsight <b>in Action!</b></h4>
+
+                  <a
+                    class="btn btn-blue mt-5 d-flex align-items-center"
+                    href="#"
+                    target="_blank"
+                    style="color: white; font-size: 1.5rem"
+                    >Schedule a Demo</a
+                  >
+                </div>
+              </div>
+              <!-- end col-md-12 -->
+            </div>
+            <!-- end row -->
+          </div>
+          <!-- end .container -->
+        </div>
+      </section>
+    </div>
+    <section class="footer"></section>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>

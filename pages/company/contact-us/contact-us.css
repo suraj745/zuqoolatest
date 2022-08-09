@@ -235,6 +235,9 @@
   gap: 2rem;
 }
 
+.office_bottom > :nth-child(1) img {
+  max-width: 53.5rem;
+}
 @media screen and (max-width: 990px) {
   .office_bottom {
     display: grid;
@@ -286,8 +289,8 @@
 }
 
 .carousel_card_container {
-  max-width: 32.28rem;
-  min-height: 29.6rem;
+  max-width: 30.28rem;
+  min-height: 32.6rem;
   background-color: white !important;
   display: flex;
   justify-content: center;
@@ -321,7 +324,7 @@
 /* --------------------------------- chatBox -------------------------------- */
 
 .chat_head {
-  background-color: #f76868;
+  background-image: linear-gradient(#ff6e6e, #ffb4b4);
   display: flex;
   align-items: center;
   padding: 0.5rem;
@@ -335,7 +338,15 @@
 
 .chat_head > ul {
   display: flex;
-  color: white;
+  color: silver;
+}
+
+.user_name > h2 {
+  color: black;
+}
+.user_name > h2,
+.user_name > p {
+  font-size: 1.7rem;
 }
 
 .chat_head .user_image img {
@@ -351,29 +362,41 @@
   position: fixed;
   right: 8rem;
   bottom: 12rem;
-  z-index: 600;
+  z-index: 999999;
   border-radius: 1rem;
   border: 0.1rem solid silver;
 }
+
+@media screen and (max-width: 576px) {
+  .chat {
+    right: 3rem;
+    bottom: 12rem;
+  }
+
+  .chatbox_container {
+    min-height: 45rem;
+
+    max-width: 30rem;
+  }
+}
 .chatbox_container {
-  height: 40rem;
+  min-height: 45rem;
   background-color: white;
   width: 35rem;
-
   font-family: "Inter";
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .chatbox {
-  width: 6rem;
-  height: 6rem;
+  width: 8rem;
+  height: 8rem;
   background-color: #ff4040;
   color: white;
   border-radius: 100%;
   position: fixed;
-  right: 5rem;
-  bottom: 5rem;
+  right: 3rem;
+  bottom: 3rem;
   z-index: 600;
   display: flex;
   justify-content: center;
@@ -394,7 +417,16 @@
   border: 0.1rem solid silver;
   display: inline-block;
   padding: 1rem;
+}
+
+.main_chat > .bot_reply_1 > p {
   border-top-left-radius: 1.8rem;
+  border-top-right-radius: 1.8rem;
+  border-bottom-right-radius: 1.8rem;
+}
+
+.main_chat > .bot_reply_2 > p {
+  border-bottom-left-radius: 1.8rem;
   border-top-right-radius: 1.8rem;
   border-bottom-right-radius: 1.8rem;
 }
@@ -410,8 +442,7 @@
   display: inline-block;
   background: #ff4040;
   color: white;
-  border-top-right-radius: 1.8rem;
-  border-bottom-left-radius: 1.8rem;
+  border-radius: 1.8rem;
 }
 
 .message_input {

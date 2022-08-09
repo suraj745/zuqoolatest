@@ -290,6 +290,7 @@ body a:hover {
 #footer_container {
   background-color: #161c28;
   color: var(--font-zuqo);
+  font-family: "Inter";
 }
 
 #footer_bottom_right > .list > ul > :nth-child(1) strong {
@@ -361,8 +362,10 @@ body a:hover {
 }
 
 #footer_form_container ul li input {
-  width: 100%;
+  width: 85%;
   padding: 1rem 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
   border: none;
   background: none;
   outline: none;
@@ -382,6 +385,12 @@ body a:hover {
 
 #footer_form_container ul label {
   color: white;
+}
+
+.footer_submit > button {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer_email,

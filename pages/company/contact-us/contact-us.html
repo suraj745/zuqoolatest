@@ -44,7 +44,7 @@
                 <li class="user_image">
                   <img src="/images/bot.jpg" alt="" />
                 </li>
-                <li class="user_name">
+                <li class="user_name px-2">
                   <h2>Demo Bot</h2>
                   <p>Automated Chat</p>
                 </li>
@@ -54,21 +54,11 @@
             </li>
             <li>
               <ul class="main_chat">
-                <li class="bot">
+                <li class="bot bot_reply_1">
                   <p>Hi there</p>
                 </li>
 
-                <li class="bot">
-                  <p>How can i help you today ?</p>
-                </li>
-                <li class="user">
-                  <p>Hello</p>
-                </li>
-                <li class="bot">
-                  <p>Hi there</p>
-                </li>
-
-                <li class="bot">
+                <li class="bot bot_reply_2">
                   <p>How can i help you today ?</p>
                 </li>
                 <li class="user">
@@ -93,7 +83,7 @@
     <section class="container-fluid contactus_outer_container">
       <section class="container contactus_inner_container">
         <section class="row justify-content-center">
-          <ul class="col contactus_left text-center">
+          <ul class="col contactus_left text-center mb-5">
             <li data-aos="fade-up" data-aos-duration="1000">
               <h1>Contact us</h1>
             </li>
@@ -181,11 +171,11 @@
             <li><h1 class="text-white">Our Head Office</h1></li>
           </ul>
           <ul class="col office_bottom mt-5">
-            <li>
+            <li class="text-lg-end">
               <img src="/images/headoffice.webp" alt="" />
             </li>
             <li>
-              <ul class="office_bottom_content">
+              <ul class="office_bottom_content mx-lg-5 px-lg-5">
                 <li>
                   <i class="fa-solid fa-location-dot"></i>
                   <p>
@@ -396,7 +386,7 @@
     <script>
       var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
-        spaceBetween: 10,
+        spaceBetween: 0,
         slidesPerView: 3,
         loop: true,
         coverflowEffect: {
@@ -404,6 +394,19 @@
           stretch: 0,
           depth: -100,
           slideShadows: false,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            effect: "slide",
+          },
+          990: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+          },
         },
       });
 

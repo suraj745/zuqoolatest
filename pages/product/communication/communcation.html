@@ -2138,7 +2138,6 @@
     #section-3 .image-content img,
     #section-header .image-content img {
       width: 100%;
-      max-width: 580px;
     }
 
     #section-3 .text-content h2 {
@@ -2360,9 +2359,20 @@
       min-height: 80vh !important;
     }
 
-    .banner_container {
-      min-height: 80vh;
+    .image_banner {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
     }
+    @media screen and (min-width: 1200px) {
+      .image_banner {
+        background-image: url("/images/frustrated-man-on-computer.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+      }
+    }
+
     /**/
   </style>
   <body>
@@ -2370,28 +2380,32 @@
     <div id="product-page-rebrand" class="product-rebrand">
       <div id="page-wrap">
         <div id="section-header" class="right-container-image">
-          <div
-            class="container banner_container overflow-hidden d-flex flex-column flex-lg-row space-between"
-          >
-            <img src="/images/Rectangle-30.png" alt="" class="title-image" />
-            <div class="col-lg-6 text-content">
-              <h1 data-aos="fade-up" data-aos-duration="1000">communication</h1>
-              <h2
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay="500"
-              >
-                Lorem ipsum dolor sit amet <strong>Recusanda</strong>
-              </h2>
+          <section class="container-fluid image_banner">
+            <div
+              class="container banner_container overflow-hidden d-flex flex-column flex-lg-row"
+            >
+              <img src="/images/Rectangle-30.png" alt="" class="title-image" />
+              <div class="col-lg-6 text-content">
+                <h1 data-aos="fade-up" data-aos-duration="1000">
+                  communication
+                </h1>
+                <h2
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="500"
+                >
+                  Lorem ipsum dolor sit amet <strong>Recusanda</strong>
+                </h2>
+              </div>
+              <div class="col-lg-6 image-content anim_product">
+                <img
+                  class="d-xl-none"
+                  src="/images/frustrated-man-on-computer.png"
+                  alt=""
+                />
+              </div>
             </div>
-            <div class="col-lg-6 image-content anim_product">
-              <img
-                src="/images/communcation_banner.webp"
-                alt=""
-                class="bg-image"
-              />
-            </div>
-          </div>
+          </section>
         </div>
 
         <div class="logos-badge mt-5 mt-lg-0">

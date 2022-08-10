@@ -131,7 +131,6 @@
 
     img {
       width: 100%;
-      height: auto;
     }
 
     .col-md-12 {
@@ -1682,6 +1681,14 @@
       display: flex;
       align-items: center;
     }
+    @media screen and (min-width: 1200px) {
+      .container_banner {
+        background-image: url("/images/shop.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: right;
+      }
+    }
   </style>
   <body>
     <section class="navbar-comp"></section>
@@ -1689,69 +1696,83 @@
       <div id="page-wrap">
         <div id="content" class="page-section nopadding">
           <div id="header-featured" style="background-color: #ffffff">
-            <div class="container container_banner pt-5 pt-lg-0">
-              <div class="row">
-                <div class="d-flex flex-wrap overflow-hidden">
-                  <div id="header-featured__text" class="col-lg-6">
-                    <h1 data-aos="fade-up" data-aos-duration="1000" class="">
-                      E-commerce
-                    </h1>
-                    <h1
-                      data-aos="fade-up"
-                      data-aos-duration="1000"
-                      data-aos-delay="500"
-                      class="main-title"
-                    >
-                      Lorem <strong> ipsum </strong>
-                    </h1>
-                    <p></p>
-                    <p
-                      data-aos="fade-up"
-                      data-aos-duration="1000"
-                      data-aos-delay="1000"
-                      style="color: #5b6670 !important"
-                    >
-                      Keep your customers healthy with the top-rated, HIPAA
-                      compliant Customer Success Platform, so that they can
-                      focus on what’s most important: their patients’ health.
-                    </p>
-                    <p></p>
-                    <div class="row" id="btn-row">
-                      <div class="btn-wrap px-0">
-                        <a
-                          class="btn btn-header active"
-                          href="#"
-                          target="_blank"
-                          >DEMO GAINSIGHT FOR HEALTHCARE</a
-                        >
+            <div
+              class="container-fluid container_banner position-relative pt-5 pt-lg-0"
+            >
+              <img
+                src="/images/header-churn-bg.png"
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  object-fit: contain;
+                  width: 50rem;
+                "
+              />
+              <section class="container">
+                <div class="row">
+                  <div class="d-flex flex-wrap overflow-hidden">
+                    <div id="header-featured__text" class="col-lg-6">
+                      <h1 data-aos="fade-up" data-aos-duration="1000" class="">
+                        E-commerce
+                      </h1>
+                      <h1
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="500"
+                        class="main-title"
+                      >
+                        Lorem <strong> ipsum </strong>
+                      </h1>
+                      <p></p>
+                      <p
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="1000"
+                        style="color: #5b6670 !important"
+                      >
+                        Keep your customers healthy with the top-rated, HIPAA
+                        compliant Customer Success Platform, so that they can
+                        focus on what’s most important: their patients’ health.
+                      </p>
+                      <p></p>
+                      <div class="row" id="btn-row">
+                        <div class="btn-wrap px-0">
+                          <a
+                            class="btn btn-header active"
+                            href="#"
+                            target="_blank"
+                            >DEMO GAINSIGHT FOR HEALTHCARE</a
+                          >
+                        </div>
+                        <div class="btn-wrap"></div>
                       </div>
-                      <div class="btn-wrap"></div>
                     </div>
-                  </div>
-                  <div id="header-featured__photo" class="col-md-6 col-sm-12">
-                    <!--a href="" target="_blank"!-->
-                    <img
-                      data-aos="fade-left"
-                      data-aos-duration="1000"
-                      class="d-block img-right"
-                      src="/images/shop.png"
-                      alt=""
-                    />
-                    <!--/a!-->
-                    <div id="myModal" class="modal">
-                      <span class="close">×</span>
-                      <div class="container-1260">
-                        <div class="row">
-                          <div class="col-md-12 text-center">
-                            <img class="modal-content" id="img01" />
+                    <div id="header-featured__photo" class="col-md-6 col-sm-12">
+                      <!--a href="" target="_blank"!-->
+                      <img
+                        data-aos="fade-left"
+                        data-aos-duration="1000"
+                        class="d-block d-xl-none img-right"
+                        src="/images/shop.png"
+                        alt=""
+                      />
+                      <!--/a!-->
+                      <div id="myModal" class="modal">
+                        <span class="close">×</span>
+                        <div class="container-1260">
+                          <div class="row">
+                            <div class="col-md-12 text-center">
+                              <img class="modal-content" id="img01" />
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <!-- end col-md-12 -->
                 </div>
-                <!-- end col-md-12 -->
-              </div>
+              </section>
               <!-- end row -->
             </div>
             <!-- end .container -->

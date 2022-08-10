@@ -2356,9 +2356,23 @@
         padding-bottom: 40px;
       }
     }
-    .gs-container {
-      min-height: 80vh !important;
+
+    .banner-container {
+      min-height: 90vh;
     }
+    @media screen and (min-width: 1200px) {
+      .banner-container {
+        background-image: url("/images/analytics.webp");
+        background-size: contain;
+        background-position-x: right;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .banner-left > div > :nth-child(2) {
+      font-size: clamp(3rem, 4vw, 5rem) !important;
+    }
+
     /**/
   </style>
   <body>
@@ -2367,26 +2381,40 @@
       <div id="page-wrap">
         <div id="section-header" class="right-container-image">
           <div
-            class="gs-container overflow-hidden d-flex flex-column flex-lg-row space-between"
+            class="container-fluid banner-container overflow-hidden d-flex flex-column flex-lg-row space-between"
           >
             <img src="/images/Rectangle-30.png" alt="" class="title-image" />
-            <div class="text-content">
-              <h1 data-aos="fade-up" data-aos-duration="1000">Analytics</h1>
-              <h2
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay="500"
-              >
-                <strong>Research</strong> and understand your users' needs.
-              </h2>
-            </div>
-            <div class="image-content anim_product">
-              <img src="/images/analytics.webp" alt="" class="bg-image" />
-            </div>
+
+            <section class="container">
+              <section class="row">
+                <section class="col-lg-6 banner-left">
+                  <div>
+                    <h1 data-aos="fade-up" data-aos-duration="1000">
+                      Analytics
+                    </h1>
+                    <h2
+                      data-aos="fade-up"
+                      data-aos-duration="1000"
+                      data-aos-delay="500"
+                    >
+                      <strong>Research</strong> and understand your users'
+                      needs.
+                    </h2>
+                  </div>
+                </section>
+                <section class="col-lg-6">
+                  <img
+                    class="d-block d-xl-none"
+                    src="/images/analytics.webp"
+                    alt=""
+                  />
+                </section>
+              </section>
+            </section>
           </div>
         </div>
 
-        <div class="logos-badge mt-5">
+        <div class="logos-badge mt-5 mt-lg-0">
           <div class="section-logos">
             <div class="container-980">
               <div class="row">

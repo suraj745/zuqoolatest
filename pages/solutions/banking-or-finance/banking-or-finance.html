@@ -1681,6 +1681,15 @@
       display: flex;
       align-items: center;
     }
+
+    @media screen and (min-width: 1200px) {
+      .container_banner {
+        background-image: url("/images/finances.webp");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: right;
+      }
+    }
   </style>
   <body>
     <section class="navbar-comp"></section>
@@ -1688,9 +1697,21 @@
       <div id="page-wrap">
         <div id="content" class="page-section nopadding">
           <div id="header-featured" style="background-color: #ffffff">
-            <div class="container container_banner pt-5 pt-lg-0">
-              <div class="row">
-                <div class="d-flex flex-wrap overflow-hidden">
+            <div
+              class="container-fluid position-relative container_banner pt-5 pt-lg-0"
+            >
+              <img
+                src="/images/header-churn-bg.png"
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  object-fit: contain;
+                  width: 50rem;
+                "
+              />
+              <section class="container">
+                <div class="row">
                   <div id="header-featured__text" class="col-md-6 col-sm-12">
                     <h2 style="font-size: 2.5rem">Banking or Finance</h2>
                     <h1 data-aos="fade-up" data-aos-duration="1000" class="">
@@ -1721,7 +1742,7 @@
                     <img
                       data-aos="fade-left"
                       data-aos-duration="1000"
-                      class="d-block img-right"
+                      class="d-block d-xl-none img-right"
                       src="/images/finances.webp"
                       alt=""
                     />
@@ -1737,9 +1758,9 @@
                       </div>
                     </div>
                   </div>
+                  <!-- end col-md-12 -->
                 </div>
-                <!-- end col-md-12 -->
-              </div>
+              </section>
               <!-- end row -->
             </div>
             <!-- end .container -->
@@ -1748,7 +1769,7 @@
 
           <div
             id="section_logo_list"
-            class="mt-5"
+            class="mt-5 mt-xl-0"
             style="background-color: #ff4040"
           >
             <div class="container-980 ptb-55">

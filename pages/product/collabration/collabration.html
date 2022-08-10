@@ -2372,6 +2372,37 @@
         padding-bottom: 40px;
       }
     }
+
+    .image_banner {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+    }
+    @media screen and (min-width: 1200px) {
+      .image_banner {
+        background-image: url("/images/collab.webp");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+      }
+    }
+
+    .collab_left > :nth-child(1) h1 {
+      text-transform: uppercase;
+    }
+
+    .collab_left > :nth-child(3) p {
+      font-size: clamp(1.8rem, 4vw, 2rem);
+      color: #707070 !important;
+    }
+    .para > p {
+      font-size: clamp(2.4rem, 4vw, 4rem);
+      color: #707070 !important;
+    }
+
+    .para > p > strong {
+      color: #ff4040;
+    }
     /**/
   </style>
   <body>
@@ -2380,28 +2411,42 @@
       <div id="page-wrap">
         <div id="section-header" class="right-container-image">
           <div
-            class="gs-container overflow-hidden d-flex flex-column flex-lg-row space-between"
+            class="container-fluid image_banner overflow-hidden d-flex flex-column flex-lg-row space-between"
           >
             <img src="/images/Rectangle-30.png" alt="" class="title-image" />
-            <div class="text-content">
-              <h1 data-aos="fade-up" data-aos-duration="1000">Collabration</h1>
-              <h2
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay="500"
-              >
-                Lorem Ipsum is simply <strong>dummy</strong>
-              </h2>
-              <!-- <section class="mt-5">
-                <a href="#" class="btn btn-header active">Schedule a Demo</a>
-                <a href="#" class="btn btn-header mx-lg-3 mx-0 active"
-                  >Tour The Product</a
-                >
-              </section> -->
-            </div>
-            <div class="image-content anim_product">
-              <img src="/images/collab.webp" alt="" class="bg-image" />
-            </div>
+            <section class="container-fluid collab_banner">
+              <section class="container">
+                <section class="row">
+                  <ul class="col-lg-6 collab_left pt-5 pt-lg-0">
+                    <li data-aos="fade-up" data-aos-duration="1000">
+                      <h1>Collaboration</h1>
+                    </li>
+                    <li
+                      class="para"
+                      data-aos="fade-up"
+                      data-aos-duration="1000"
+                      data-aos-delay="500"
+                    >
+                      <p>Lorem Ipsum is <strong>simply dummy</strong> text</p>
+                    </li>
+                    <li
+                      data-aos="fade-up"
+                      data-aos-duration="1000"
+                      data-aos-delay="1000"
+                    >
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        In integer praesent amet amet egestas. Orci magna dolor
+                        nisl at porttitor scelerisque quam.
+                      </p>
+                    </li>
+                  </ul>
+                  <section class="col-lg-6 collab_right">
+                    <img class="d-xl-none" src="/images/collab.webp" alt="" />
+                  </section>
+                </section>
+              </section>
+            </section>
           </div>
         </div>
 

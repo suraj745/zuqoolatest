@@ -2356,39 +2356,76 @@
         padding-bottom: 40px;
       }
     }
-    .gs-container {
-      min-height: 80vh !important;
+    .banner-container {
+      min-height: 90vh !important;
+      display: flex;
+      align-items: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+      .banner-container {
+        background-image: url("/images/ai.webp");
+        background-size: contain;
+
+        background-repeat: no-repeat;
+        background-position-x: right;
+      }
     }
     /**/
+
+    .banner-left > ul :nth-child(2) h2 {
+      font-size: clamp(3rem, 4vw, 5rem) !important;
+    }
+
+    .banner-left > ul :nth-child(1) h1 {
+      margin-bottom: 2rem !important;
+    }
   </style>
   <body>
     <section class="navbar-comp"></section>
     <div id="product-page-rebrand" class="product-rebrand">
       <div id="page-wrap">
         <div id="section-header" class="right-container-image">
-          <div
-            class="gs-container overflow-hidden d-flex flex-column flex-lg-row space-between"
-          >
-            <img src="/images/Rectangle-30.png" alt="" class="title-image" />
-            <div class="text-content">
-              <h1 data-aos="fade-up" data-aos-duration="1000">
-                Artifical Intelligence
-              </h1>
-              <h2
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay="500"
-              >
-                <strong> Machine learning </strong> is an exciting part
-              </h2>
-            </div>
-            <div class="image-content anim_product">
-              <img src="/images/ai.webp" alt="" class="bg-image" />
-            </div>
-          </div>
+          <section class="container-fluid pt-5 pt-xl-0 banner-container">
+            <img
+              src="/images/header-churn-bg.png"
+              style="
+                position: absolute;
+                left: 0;
+                top: 0;
+                object-fit: contain;
+                width: 50rem;
+              "
+            />
+            <section class="container">
+              <section class="row">
+                <section class="col-lg-6 banner-left">
+                  <ul>
+                    <li>
+                      <h1 data-aos="fade-up" data-aos-duration="1000">
+                        Artifical Intelligence
+                      </h1>
+                    </li>
+                    <li>
+                      <h2
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="500"
+                      >
+                        <strong> Machine learning </strong> is an exciting part
+                      </h2>
+                    </li>
+                  </ul>
+                </section>
+                <section class="col-lg-6">
+                  <img class="d-block d-xl-none" src="/images/ai.webp" alt="" />
+                </section>
+              </section>
+            </section>
+          </section>
         </div>
 
-        <div class="logos-badge mt-5">
+        <div class="logos-badge mt-5 mt-lg-0">
           <div class="section-logos">
             <div class="container-980">
               <div class="row">

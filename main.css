@@ -7,6 +7,15 @@
   --reddark: #dd1e1e;
 }
 
+@font-face {
+  font-family: "MydriadBold";
+  src: url("/font/Myriad\ Pro\ Black.otf");
+}
+@font-face {
+  font-family: "Mydriad";
+  src: url("/myriadregular.ttf");
+}
+
 *,
 *::after,
 *::before {
@@ -1673,4 +1682,282 @@ body a:hover {
 
 #partner_container #partner-right > :nth-child(8) {
   grid-area: eight;
+}
+
+/* --------------------------------- Banner --------------------------------- */
+
+.outer_container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.inner_container .inner_left {
+  position: relative;
+}
+.inner_container .inner_left > li {
+  margin-top: 1rem;
+}
+.inner_container .inner_left > :nth-child(1) p {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  color: black !important;
+}
+
+.inner_container .inner_left > :nth-child(2) h1 {
+  font-size: clamp(2.5rem, 4vw, 5rem);
+  font-weight: 800;
+  color: #ff4040 !important;
+}
+
+.inner_container .inner_left > :nth-child(3) p {
+  color: black !important;
+  font-weight: 500 !important;
+}
+
+.inner_container .inner_left > :nth-child(4) button {
+  background: none;
+  border: none;
+  outline: none;
+  background-color: #ff4040;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 0.2rem solid;
+  transition: 0.6s;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+}
+
+.inner_container .inner_left > :nth-child(4) button:hover {
+  background-color: white;
+  color: #ff4040;
+  border-color: #ff4040;
+}
+
+@media screen and (max-width: 1375px) {
+  .strip {
+    display: none;
+  }
+}
+.outer_container > img {
+  position: absolute;
+  bottom: -19rem;
+  width: 80rem;
+  z-index: inherit;
+}
+.outer_container > .red_rectangle {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .outer_container > .red_rectangle {
+    width: 15rem;
+    right: 40rem;
+    top: 0;
+    position: absolute;
+    display: block;
+  }
+}
+
+.about_outer_container {
+  background-image: url("/newbannerimage/aboutus.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.about_left > :nth-child(1) p {
+  font-size: clamp(3rem, 6vw, 8rem);
+  font-weight: 500;
+}
+
+.about_left > :nth-child(2) h1 {
+  font-size: clamp(3rem, 6vw, 8rem);
+  color: white;
+  font-weight: 800;
+}
+
+.about_left > :nth-child(3) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+}
+@media screen and (max-width: 768px) {
+  .about_left > :nth-child(3) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .about_left {
+    text-align: center;
+  }
+}
+
+.about_left > li {
+  margin-top: 2rem;
+}
+
+.about_left > :nth-child(3) button {
+  background: none;
+  border: none;
+  outline: none;
+  background-color: #ff4040;
+  color: white;
+  font-weight: 500;
+  font-size: clamp(1rem, 4vw, 1.8rem);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  border: 0.2rem solid transparent;
+  transition: 0.6s;
+}
+
+.about_left > :nth-child(3) button:hover {
+  background-color: white;
+  color: #ff4040;
+  border-color: #ff4040;
+}
+
+.ai_outer_container > img,
+.analytic_outer_container > img,
+.collab_outer_container > img,
+.comm_outer_container > img {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .ai_outer_container > img,
+  .analytic_outer_container > img,
+  .collab_outer_container > img,
+  .comm_outer_container > img {
+    width: 25rem;
+    position: absolute;
+    display: block;
+    object-fit: contain;
+    z-index: -1;
+  }
+
+  .tri1 {
+    right: 35rem;
+    top: 0rem;
+  }
+
+  .tri2 {
+    right: 50rem;
+    top: 30rem;
+  }
+}
+
+.ai_inner_left > :nth-child(1) p {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #ff4040 !important;
+  text-transform: uppercase;
+}
+
+.ai_inner_left > :nth-child(2) p {
+  font-size: clamp(4rem, 6vw, 7.2rem);
+  color: black !important;
+  line-height: normal !important;
+}
+
+.ai_inner_left > :nth-child(3) h1 {
+  font-size: clamp(4rem, 6vw, 7.2rem) !important;
+  text-transform: capitalize !important;
+  font-weight: 900 !important;
+  line-height: normal !important;
+}
+
+.ai_inner_left > :nth-child(4) > img {
+  object-fit: contain;
+  width: 25rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .ecommerce_outer_container {
+    background-image: url("/newbannerimage/web/Ecommerce.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+  }
+
+  .hospital_outer_container {
+    background-image: url("/newbannerimage/web/Hospitality.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+  }
+
+  .telecom_outer_container {
+    background-image: url("/newbannerimage/web/Telecom.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+  }
+
+  .healtcare_outer_container {
+    background-image: url("/newbannerimage/web/HealthCare.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+  }
+
+  .banking_outer_container {
+    background-image: url("/newbannerimage/web/Banking.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+  }
+
+  .education_outer_container {
+    background-image: url("/newbannerimage/web/Student.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+  }
+
+  .manufacturing_outer_container {
+    background-image: url("/newbannerimage/web/Manufacturing.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+  }
+
+  .insurance_outer_container {
+    background-image: url("/newbannerimage/web/Insurance.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+  }
+
+  .ai_outer_container {
+    background-image: url("/newbannerimage/product/ai.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-y: 4rem;
+  }
+
+  .analytic_outer_container {
+    background-image: url("/newbannerimage/product/Analytics.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-y: 4rem;
+  }
+
+  .collab_outer_container {
+    background-image: url("/newbannerimage/product/Collaboration.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-y: 4rem;
+  }
+
+  .comm_outer_container {
+    background-image: url("/newbannerimage/product/communication.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-y: 4rem;
+  }
 }

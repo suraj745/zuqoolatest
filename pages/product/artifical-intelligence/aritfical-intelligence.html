@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/main.css" />
     <!-- <link rel="stylesheet" href="../healthcare/health.css" /> -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
@@ -26,11 +27,9 @@
   </head>
 
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
-
     #navigation .btn-border.btn-clear-orange {
       border-radius: 30px;
-      font-family: "Montserrat", "Roboto", Helvetica, sans-serif;
+      font-family: "Montserrat", "Roboto", "Mydriad" Helvetica, sans-serif;
       color: #feac22 !important;
       border-color: #feac22 !important;
       font-size: 0.755rem;
@@ -2386,39 +2385,58 @@
     <div id="product-page-rebrand" class="product-rebrand">
       <div id="page-wrap">
         <div id="section-header" class="right-container-image">
-          <section class="container-fluid pt-5 pt-xl-0 banner-container">
+          <section
+            class="container-fluid outer_container ai_outer_container pt-5 pt-lg-0"
+            style="font-family: Mydriad !important"
+          >
             <img
-              src="/images/header-churn-bg.png"
-              style="
-                position: absolute;
-                left: 0;
-                top: 0;
-                object-fit: contain;
-                width: 50rem;
-              "
+              class="tri1 tri"
+              src="/newbannerimage/product/rect1.png"
+              alt=""
             />
+            <img
+              class="tri2 tri"
+              src="/newbannerimage/product/rect1.png"
+              alt=""
+            />
+
             <section class="container">
-              <section class="row">
-                <section class="col-lg-6 banner-left">
-                  <ul>
-                    <li>
-                      <h1 data-aos="fade-up" data-aos-duration="1000">
-                        Artifical Intelligence
-                      </h1>
-                    </li>
-                    <li>
-                      <h2
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                        data-aos-delay="500"
-                      >
-                        <strong> Machine learning </strong> is an exciting part
-                      </h2>
-                    </li>
-                  </ul>
-                </section>
+              <section class="row gap-5 gap-lg-0">
+                <ul class="col-lg-6 ai_inner_left">
+                  <li data-aos="fade-up" data-aos-duration="1000">
+                    <p style="font-family: Mydriad !important">
+                      Artifical Intelligence
+                    </p>
+                  </li>
+                  <li
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="500"
+                  >
+                    <p style="font-family: Mydriad !important">
+                      Lorem ipsum is simmply dummy
+                    </p>
+                  </li>
+                  <li
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="1000"
+                  >
+                    <h1 style="font-family: MydriadBold !important">
+                      Text of the <br />
+                      Printing
+                    </h1>
+                  </li>
+                  <li>
+                    <img src="/newbannerimage/product/tri.png" alt="" />
+                  </li>
+                </ul>
                 <section class="col-lg-6">
-                  <img class="d-block d-xl-none" src="/images/ai.webp" alt="" />
+                  <img
+                    class="d-xl-none d-block"
+                    src="/newbannerimage/product/ai.png"
+                    alt=""
+                  />
                 </section>
               </section>
             </section>

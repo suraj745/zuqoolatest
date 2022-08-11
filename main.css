@@ -1715,6 +1715,11 @@ body a:hover {
   font-weight: 500 !important;
 }
 
+@media screen and (max-width: 1300px) {
+  .inner_container .inner_left > :nth-child(3) p {
+    max-width: 50rem;
+  }
+}
 .inner_container .inner_left > :nth-child(4) button {
   background: none;
   border: none;

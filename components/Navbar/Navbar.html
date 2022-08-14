@@ -356,12 +356,27 @@
                               Segments with perfect target</a
                             >
                           </li>
-                          <li>
-                            <img src="/svg/ai.svg" alt="" /><a
-                              href="/pages/product/artifical-intelligence/aritfical-intelligence.html"
-                              ><span>Artificial Intelligence</span>
-                              <br />Connect to your warehouse</a
-                            >
+                          <li class="submenu_container">
+                            <section class="submenu_heading">
+                              <section>
+                                <img src="/svg/ai.svg" alt="" /><a href="#"
+                                  ><span>Artificial Intelligence</span>
+                                  <br />Connect to your warehouse</a
+                                >
+                              </section>
+
+                              <i
+                                class="fa-solid fa-angle-down"
+                                id="submenu_arrow"
+                              ></i>
+                            </section>
+
+                            <ul class="submenu">
+                              <li><a>Customer Analytics</a></li>
+                              <li><a>Speech Analytics</a></li>
+                              <li><a>Video Analytics</a></li>
+                              <li><a>Automation</a></li>
+                            </ul>
                           </li>
                         </ul>
                       </div>
@@ -660,5 +675,12 @@
     } else {
       $(".navbar-comp").removeClass("sticky");
     }
+  });
+
+  $(document).ready(function () {
+    $(".submenu_heading").click(function () {
+      $("#submenu_arrow").toggleClass("rotate");
+      $(".submenu").slideToggle();
+    });
   });
 </script>

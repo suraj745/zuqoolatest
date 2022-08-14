@@ -1984,3 +1984,78 @@ body a:hover {
     background-position-y: 4rem;
   }
 }
+
+/* --------------------------------- Product -------------------------------- */
+
+.visual_outer_container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.visual_left > :nth-child(1) p {
+  font-size: clamp(3rem, 4vw, 4rem);
+  color: #ff4040 !important;
+  text-transform: uppercase;
+  font-family: Mydriad !important;
+}
+
+/* --------------------------------- submenu -------------------------------- */
+
+.submenu_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.submenu_heading > section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: sans-serif;
+  gap: 1rem;
+}
+
+.submenu_heading > section img {
+  width: 2.5rem;
+}
+
+.submenu_heading > section > a > span {
+  font-weight: bold !important;
+}
+
+/* .submenu_heading > i {
+  justify-self: flex-end;
+} */
+.submenu_container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.submenu {
+  width: 100%;
+  font-family: sans-serif;
+  display: none;
+}
+
+.submenu > li {
+  padding: 1rem 2rem;
+  transition: 0.2s;
+}
+
+.submenu > li:hover {
+  background-color: white;
+}
+
+#submenu_arrow {
+  font-size: 400 !important;
+  color: rgb(139, 139, 139);
+  transition: transform 0.5s;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: 0.5s;
+}

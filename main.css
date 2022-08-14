@@ -2059,3 +2059,61 @@ body a:hover {
   transform: rotate(180deg);
   transition: 0.5s;
 }
+
+/* ---------------------------------- video --------------------------------- */
+
+.video_outer_container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+#homevideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video_inner_container {
+  position: absolute;
+  z-index: 2;
+}
+.video_left {
+  padding: 5rem;
+  background-image: url("/newbannerimage/curve.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+@media screen and (max-width: 576px) {
+  .video_left {
+    background-image: none;
+    text-align: center;
+    bottom: 0;
+    color: white;
+  }
+}
+
+.video_left > li {
+  padding-inline: 5rem;
+  max-width: 90%;
+}
+
+.video_left > :nth-child(3) {
+  text-align: right;
+}
+
+.video_left > :nth-child(3) img {
+  max-width: 20rem;
+}
+
+.video_left > :nth-child(1) h1 {
+  font-size: clamp(3rem, 5vw, 7rem);
+  text-transform: uppercase;
+  color: #ff4040;
+  font-weight: 700;
+}

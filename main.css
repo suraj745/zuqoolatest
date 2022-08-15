@@ -2117,3 +2117,24 @@ body a:hover {
   color: #ff4040;
   font-weight: 700;
 }
+
+.gif_outer_container {
+  min-height: 100vh;
+  background-color: #153d5e;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.gif_outer_container > img {
+  position: absolute;
+}
+/* .gif_outer_container > :nth-child(1) {
+  object-fit: contain;
+} */
+
+.gif_outer_container > :nth-child(1) {
+  max-width: 25rem;
+  bottom: 0;
+  left: 0;
+}

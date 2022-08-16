@@ -2176,3 +2176,33 @@ body a:hover {
   height: 100%;
   object-fit: cover;
 }
+
+/* ---------------------------------- about --------------------------------- */
+
+.about_banner {
+  min-height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about_banner > img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+}
+
+.about_banner > h1 {
+  font-size: clamp(4rem, 6vw, 7.2rem);
+  font-weight: 900;
+  color: #ff4040;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  bottom: 2rem;
+  text-transform: uppercase;
+}

@@ -1,28 +1,54 @@
 .contactus_outer_container {
-  min-height: 80vh;
-  display: flex;
-  align-items: flex-end;
-  background-image: linear-gradient(#0000004f, #0000004f),
-    url("/images/contactus_bg.webp");
-  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-image: url("/newbannerimage/contactus.webp");
   background-size: cover;
-  background-position: center center;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.content {
+  position: relative;
+  z-index: 3;
+}
+
+.contactus_outer_container > img {
+  position: absolute;
+  width: 100vw;
+  object-fit: cover;
+  bottom: -5rem;
+  left: 0;
+  z-index: 1;
+}
+
+.text_content {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+.text_content li > :nth-child(2) {
   color: white;
-  padding-block-end: 5rem;
 }
 
-.contactus_left li {
-  margin-top: 3rem;
+@media screen and (min-width: 1300px) {
+  .text_content {
+    font-size: 2rem;
+    align-self: flex-end;
+    position: absolute;
+    bottom: -3rem;
+    right: 0;
+    font-size: 2.5rem;
+  }
+
+  .text_content li > :nth-child(2) {
+    color: black;
+  }
 }
 
-.contactus_left > :nth-child(1) h1 {
-  font-size: clamp(3.2rem, 4vw, 6rem);
-  font-weight: 700;
+.text_content li > :nth-child(1) {
+  color: #ff4040;
 }
-
-.contactus_left > :nth-child(2) p {
-  font-size: clamp(2.4rem, 4vw, 3.2rem);
-  font-weight: 700;
+.contact_content > :nth-child(1) h1 {
+  font-size: clamp(4rem, 6vw, 7rem);
+  font-weight: 900;
+  color: white;
+  text-shadow: 0px 6px #ff4040;
 }
 
 /* ------------------------------ cantact_card ------------------------------ */

@@ -1,32 +1,49 @@
 .contactus_outer_container {
   min-height: 100vh;
-  background-image: url("/newbannerimage/contactus.webp");
+  /* background-image: url("/newbannerimage/contactus.webp");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center top; */
 }
 .content {
   position: relative;
   z-index: 3;
 }
 
-.contactus_outer_container > img {
+.bg {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  object-fit: cover;
+}
+
+/* .contactus_outer_container > :nth-child(1) {
   position: absolute;
   width: 100vw;
   object-fit: cover;
   bottom: -5rem;
   left: 0;
   z-index: 1;
+} */
+
+@media screen and (max-width: 990px) {
+  .contactus_outer_container > img {
+    bottom: 0rem;
+    left: 0;
+  }
 }
 
 .text_content {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.6rem, 4vw, 1.8rem);
 }
 .text_content li > :nth-child(2) {
   color: white;
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 990px) {
   .text_content {
     font-size: 2rem;
     align-self: flex-end;

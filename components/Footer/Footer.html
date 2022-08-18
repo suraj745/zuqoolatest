@@ -31,22 +31,36 @@
                 <p>_Ashish dhawan</p>
               </li>
               <li class="d-flex">
-                <span id="person_1">
-                  <img src="/images/footer1.webp" alt="" />
-                </span>
-                <span id="person_2">
-                  <img src="/images/footer2.webp" alt="" />
-                </span>
-                <span id="person_3">
-                  <img src="/images/footer3.webp" alt="" />
-                </span>
-                <span id="person_4">
-                  <img src="/images/footer4.webp" alt="" />
-                </span>
-
-                <span id="person_5">
-                  <img src="/images/play.svg" alt="" />
-                </span>
+                <div class="swiper footerSwiper">
+                  <div class="swiper-wrapper footerSwiperWrapper">
+                    <div class="swiper-slide footerSlide">
+                      <span id="person">
+                        <img src="/images/footer1.webp" alt="" />
+                      </span>
+                    </div>
+                    <div class="swiper-slide footerSlide">
+                      <span id="person">
+                        <img src="/images/footer2.webp" alt="" />
+                      </span>
+                    </div>
+                    <div class="swiper-slide footerSlide">
+                      <span id="person">
+                        <img src="/images/footer3.webp" alt="" />
+                      </span>
+                    </div>
+                    <div class="swiper-slide footerSlide">
+                      <span id="person">
+                        <img src="/images/footer4.webp" alt="" />
+                      </span>
+                    </div>
+                    <div class="swiper-slide footerSlide">
+                      <span id="person">
+                        <img src="/images/play.svg" alt="" />
+                      </span>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
               </li>
             </ul>
           </section>
@@ -159,25 +173,11 @@
 </footer>
 
 <script>
-  gsap.fromTo(
-    ["#person_1,#person_2,#person_3,#person_4,#person_5"],
-    {
-      opacity: 0,
-      translateX: "-1000px",
-    },
-    {
-      opacity: 1,
-      translateX: "0px",
-      duration: 0.4,
-      stagger: 0.2,
-      scrollTrigger: {
-        trigger: "#email",
-        start: "top center",
-        end: "top ",
-      },
-    }
-  );
-
+  var footerswiper = new Swiper(".footerSwiper", {
+    slidesPerView: 5,
+    spaceBetween: 10,
+    loop: true,
+  });
   gsap.fromTo(
     ["#email_arrow"],
     {

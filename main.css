@@ -2585,3 +2585,101 @@ body a:hover {
   height: 100%;
   object-fit: cover;
 }
+
+.newfooter_outer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #427bcf;
+
+  background-image: url("/images/cut.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 75vh;
+  background-position: center bottom;
+}
+
+.newfooter {
+  position: relative;
+  z-index: 2;
+}
+
+.newfooter .newfooter_left {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 4rem;
+  place-items: left;
+}
+
+@media screen and (max-width: 990px) {
+  .newfooter .newfooter_left {
+    place-items: center;
+  }
+
+  .newfooter .newfooter_left > li img {
+    width: 15rem;
+  }
+}
+
+.newfooter .newfooter_left > li img {
+  max-width: 20rem;
+}
+
+.newfooter_right > :nth-child(1) > img {
+  max-width: 8rem;
+}
+
+.newfooter_right > li {
+  margin-top: 1rem;
+}
+.newfooter_right > li p {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 500;
+  color: white;
+  margin: 0;
+}
+
+.ad_bottom_outer {
+  background-color: #245194;
+  position: relative;
+}
+
+.ad_bottom_outer > img {
+  position: absolute;
+  max-width: 25rem;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.ad_content {
+  text-align: center;
+}
+.ad_content > li p {
+  font-size: clamp(3rem, 4vw, 4rem);
+  color: white;
+}
+
+.ad_content > :nth-child(2) button {
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: 500;
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  background: #ff4040;
+  padding: 1rem 2rem;
+  border: 0.2rem solid #ff4040;
+  border-radius: 0.4rem;
+  transition: 0.4s;
+}
+
+.ad_content > :nth-child(2) button:hover {
+  background-color: white;
+  color: #ff4040;
+}
+
+.ad_inner {
+  position: relative;
+  z-index: 2;
+}

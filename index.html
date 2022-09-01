@@ -1724,13 +1724,23 @@
           >
             <ul class="col-lg-6 newfooter_left">
               <li>
-                <img src="/images/linked2.png" alt="" />
+                <div class="swiper mySwiper_logo">
+                  <div class="swiper-wrapper swiper_logo_wrapper">
+                    <div class="swiper-slide swiper_logo">
+                      <img src="/images/linked2.png" alt="" />
+                      <img src="/images/linked2.png" alt="" />
+                    </div>
+                    <div class="swiper-slide swiper_logo">
+                      <img src="/images/linked2.png" alt="" />
+                      <img src="/images/linked2.png" alt="" />
+                    </div>
+                    <div class="swiper-slide swiper_logo">
+                      <img src="/images/linked2.png" alt="" />
+                      <img src="/images/linked2.png" alt="" />
+                    </div>
+                  </div>
+                </div>
               </li>
-              <li><img src="/images/linked2.png" alt="" /></li>
-              <li><img src="/images/linked2.png" alt="" /></li>
-              <li><img src="/images/linked2.png" alt="" /></li>
-              <li><img src="/images/linked2.png" alt="" /></li>
-              <li><img src="/images/linked2.png" alt="" /></li>
             </ul>
             <ul class="col-lg-6 newfooter_right">
               <li>
@@ -1789,5 +1799,22 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/main.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper_logo", {
+        grabCursor: false,
+        loop: true,
+        slidesPerView: 3,
+        loop: true,
+        shortSwipes: false,
+        longSwipes: false,
+        allowTouchMove: false,
+        autoplay: {
+          delay: 1,
+        },
+        freeMode: true,
+        speed: 5000,
+        direction: "vertical",
+      });
+    </script>
   </body>
 </html>

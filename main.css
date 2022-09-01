@@ -2683,3 +2683,22 @@ body a:hover {
   position: relative;
   z-index: 2;
 }
+
+.swiper_logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: max-content !important;
+  gap: 3rem;
+}
+
+.mySwiper_logo {
+  height: 60vh;
+}
+
+.swiper_logo_wrapper {
+  width: 100% !important;
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
